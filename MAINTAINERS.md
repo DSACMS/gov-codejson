@@ -30,19 +30,6 @@ This is a list of maintainers for this project. See [CODEOWNERS.md](./CODEOWNERS
 Total number of contributors: <!--CONTRIBUTOR COUNT START--> <!--CONTRIBUTOR COUNT END-->
 
 <!-- readme: contributors -start -->
-<table>
-	<tbody>
-		<tr>
-            <td align="center">
-                <a href="https://github.com/natalialuzuriaga">
-                    <img src="https://avatars.githubusercontent.com/u/29980737?v=4" width="100;" alt="natalialuzuriaga"/>
-                    <br />
-                    <sub><b>Natalia Luzuriaga</b></sub>
-                </a>
-            </td>
-		</tr>
-	<tbody>
-</table>
 <!-- readme: contributors -end -->
 
 # Tier 3 Release Guidelines
@@ -287,3 +274,7 @@ In rare cases, a hotfix for a prior release may be required out-of-phase with th
 
 
 
+ 
+ ## Maintainers List: 
+<!-- TODO: What groups/domains are maintainers a part of? Does your project have domains/areas that are maintained by specific people? List @USERNAMES directly, or any @ALIASES for groups/teams. -->
+ - 
