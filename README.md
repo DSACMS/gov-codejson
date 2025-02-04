@@ -33,7 +33,11 @@ An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAI
 ## Repository Structure
 
 <!-- TODO: Using the "tree -d" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time.-->
-<!--TREE START--><!--TREE END-->
+
+```plaintext
+.
+```
+
 
 **{list directories and descriptions}**
 
