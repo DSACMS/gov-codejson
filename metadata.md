@@ -7,7 +7,7 @@ CMS `code.json` is a metadata standard created to collect information on the age
 - required metadata outlined in the [SHARE IT ACT](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih) (e.g. repository visibility, contract number)
 - publiccode.yml metadata, an international metadata standard
 
-By harmonizing various standards, this opens up the opportunity to share our work not just on an agency level but national and international level.
+By harmonizing various standards, this opens up the opportunity to share our work not just on an agency level but also on a national and international level.
 
 ### Fields
 
@@ -53,13 +53,13 @@ By harmonizing various standards, this opens up the opportunity to share our wor
       <th>Source</th>
       <th>Type</th>
       <th>Description</th>
-      <th>Options</th>
+      <th>Options/Examples</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>name</td>
-      <td>req</td>
+      <td>required</td>
       <td>🇺🇸🌎</td>
       <td>str</td>
       <td>Name of the project or software</td>
@@ -67,7 +67,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>description</td>
-      <td>req</td>
+      <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
       <td>A short description of the project. It should be a single line containing a single sentence. Maximum 150 characters are allowed.</td>
@@ -75,7 +75,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>longDescription</td>
-      <td>req</td>
+      <td>required</td>
       <td>🌎</td>
       <td>str</td>
       <td>Provide longer description of the software, between 150 and 10000 chars. It is meant to provide an overview of the capabilities of the software for a potential user.</td>
@@ -83,7 +83,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>status</td>
-      <td>req</td>
+      <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
       <td>Development status of the project</td>
@@ -99,7 +99,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>permissions/license/url <br> permissions/license/name</td>
-      <td>req</td>
+      <td>required</td>
       <td>🇺🇸🌎</td>
       <td>obj</td>
       <td>
@@ -110,7 +110,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>permissions/usageType</td>
-      <td>req</td>
+      <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
       <td>A list of enumerated values which describes the usage permissions for the release.</td>
@@ -127,7 +127,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>permissions/exemptionText</td>
-      <td>op</td>
+      <td>optional</td>
       <td>🇺🇸📜</td>
       <td>str</td>
       <td>If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used.</td>
@@ -135,7 +135,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>organization</td>
-      <td>req</td>
+      <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
       <td>Organization responsible for the project</td>
@@ -143,7 +143,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>repositoryURL</td>
-      <td>req</td>
+      <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
       <td>The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions).</td>
@@ -151,7 +151,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>vcs (version control system)</td>
-      <td>req</td>
+      <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
       <td>Version control system used</td>
@@ -165,7 +165,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>laborHours</td>
-      <td>req</td>
+      <td>required</td>
       <td>🇺🇸</td>
       <td>int</td>
       <td>Labor hours invested in the project. Calculated through <a href="https://github.com/boyter/scc">COCOMO & SCC tool</a></td>
@@ -173,7 +173,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>platform</td>
-      <td>req</td>
+      <td>required</td>
       <td>🌎</td>
       <td>arr</td>
       <td>Platforms supported by the project</td>
@@ -189,7 +189,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>categories</td>
-      <td>req</td>
+      <td>required</td>
       <td>🌎</td>
       <td>arr</td>
       <td>Categories the project belongs to.</td>
@@ -197,7 +197,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>softwareType</td>
-      <td>req</td>
+      <td>required</td>
       <td>🌎</td>
       <td>str</td>
       <td>Type of software</td>
@@ -215,7 +215,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>languages</td>
-      <td>req</td>
+      <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
       <td>Programming languages that make up the codebase</td>
@@ -223,7 +223,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>maintenance</td>
-      <td>req</td>
+      <td>required</td>
       <td>🌎📜</td>
       <td>str</td>
       <td>Maintenance status</td>
@@ -236,7 +236,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>date/created <br> date/lastModified date/metadataLastUpdated</td>
-      <td>req</td>
+      <td>required</td>
       <td>🇺🇸</td>
       <td>obj</td>
       <td>A date object describing the release</td>
@@ -244,7 +244,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>tags</td>
-      <td>req</td>
+      <td>required</td>
       <td>🇺🇸</td>
       <td>arr</td>
       <td>Tags associated with the project</td>
@@ -252,7 +252,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>contact/email <br> contact/name</td>
-      <td>req</td>
+      <td>required</td>
       <td>🇺🇸🌎</td>
       <td>obj</td>
       <td>Point of contact for the release<br>Email of point of contact<br>Name of point of contact</td>
@@ -260,18 +260,18 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>localisation</td>
-      <td>req</td>
+      <td>required</td>
       <td>🌎</td>
       <td>bool</td>
       <td>Indicates if the project supports multiple languages</td>
       <td>
-        - True<br>
-        - False
+        - true<br>
+        - false
       </td>
     </tr>
     <tr>
       <td>repositoryType</td>
-      <td>req</td>
+      <td>required</td>
       <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>str</td>
       <td>Purpose and functionality of the repository</td>
@@ -288,7 +288,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>userInput</td>
-      <td>req</td>
+      <td>required</td>
       <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>bool</td>
       <td>Does the software accept user input?</td>
@@ -299,8 +299,8 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>fismaLevel</td>
-      <td>req</td>
-      <td><img src="image2" alt="cms-logo"></td>
+      <td>required</td>
+      <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>str</td>
       <td>FISMA security level <a href="https://security.cms.gov/learn/federal-information-security-modernization-act-fisma">link</a></td>
       <td>
@@ -311,7 +311,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>group</td>
-      <td>req</td>
+      <td>required</td>
       <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>str</td>
       <td>Home Department / Org / Group associated with the project</td>
@@ -319,7 +319,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>subsetInHealthcare</td>
-      <td>req</td>
+      <td>required</td>
       <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>arr</td>
       <td>Healthcare-related subset</td>
@@ -332,7 +332,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>userType</td>
-      <td>req</td>
+      <td>required</td>
       <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>arr</td>
       <td>Types of users who interact with the software</td>
@@ -344,20 +344,21 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>repositoryHost</td>
-      <td>req</td>
+      <td>required</td>
       <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>str</td>
       <td>Location where source code is hosted</td>
       <td>
         - github.com/CMSgov<br>
         - github.com/CMS-Enterprise<br>
+        - github.com/DSACMS<br>
         - github.cms.gov<br>
         - CCSQ GitHub
       </td>
     </tr>
     <tr>
       <td>maturityModelTier</td>
-      <td>req</td>
+      <td>required</td>
       <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>int</td>
       <td>Maturity model tier</td>
@@ -365,7 +366,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>contractNumber</td>
-      <td>req</td>
+      <td>required</td>
       <td>📜</td>
       <td>int</td>
       <td>Contract number</td>
@@ -373,7 +374,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>repositoryVisibility</td>
-      <td>req</td>
+      <td>required</td>
       <td>📜</td>
       <td>str</td>
       <td>Visibility of repository</td>
@@ -384,7 +385,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>reuseFrequency/forks <br> reuseFrequency/downloads</td>
-      <td>req</td>
+      <td>required</td>
       <td>📜</td>
       <td>obj</td>
       <td>Measures frequency of code reuse in various forms</td>
@@ -392,7 +393,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>feedbackMechanisms</td>
-      <td>req</td>
+      <td>required</td>
       <td>📜</td>
       <td>arr</td>
       <td>Array of methods repositories receive feedback. Default value is the URL to GitHub repository issues</td>
@@ -405,18 +406,15 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>project</td>
-      <td>req</td>
+      <td>required</td>
       <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>arr</td>
       <td>Maps repositories to projects</td>
-      <td>
-        - bluebutton<br>
-        - codejson
-      </td>
+      <td>bluebutton, codejson</td>
     </tr>
     <tr>
       <td>systems</td>
-      <td>op</td>
+      <td>optional</td>
       <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>arr</td>
       <td>Maps repositories to CMS systems</td>
@@ -424,7 +422,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
     <tr>
       <td>upstream</td>
-      <td>op</td>
+      <td>optional</td>
       <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>arr</td>
       <td>List of upstream repos used</td>
