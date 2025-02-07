@@ -32,6 +32,26 @@ This is a list of maintainers for this project. See [CODEOWNERS.md](./CODEOWNERS
 Total number of contributors: <!--CONTRIBUTOR COUNT START--> <!--CONTRIBUTOR COUNT END-->
 
 <!-- readme: contributors -start -->
+<table>
+	<tbody>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/natalialuzuriaga">
+                    <img src="https://avatars.githubusercontent.com/u/29980737?v=4" width="100;" alt="natalialuzuriaga"/>
+                    <br />
+                    <sub><b>Natalia Luzuriaga</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/cms-eo14168">
+                    <img src="https://avatars.githubusercontent.com/u/197958188?v=4" width="100;" alt="cms-eo14168"/>
+                    <br />
+                    <sub><b>cms-eo14168</b></sub>
+                </a>
+            </td>
+		</tr>
+	<tbody>
+</table>
 <!-- readme: contributors -end -->
 
 # Tier 3 Release Guidelines
