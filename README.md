@@ -6,13 +6,13 @@ CMS code.json: An agency-wide metadata standard for software projects
 
 This repository contains documentation on CMS code.json, a metadata standard used to collect information on the agency's software projects in compliance with [M-16-21](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf) and the [SHARE IT Act](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih).
 
-<!---
 ### Project Vision
-**{project vision}** -->
 
-<!--
+To streamline federal agencies' compliance with open source requirements that ensures consistent, accurate, and automated collection of software project metadata enabling transparency, traceability, and efficient risk management across the government.
+
 ### Project Mission
-**{project mission}** -->
+
+To develop and implement a standardized metadata framework for collecting and managing software project information across the agency.
 
 <!--
 ### Agency Mission
