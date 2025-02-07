@@ -20,6 +20,8 @@ For more information on repo-scaffolder, check out the [documentation](https://g
 
 Users can fill out a web form that creates a code.json file to be uploaded to a project's source code repository: https://dsacms.github.io/codejson-generator.
 
+<!-- TODO: New section on automated-codejson-generator -->
+
 ## Updating project metadata
 
-<!-- TODO: Add explainer on codejson-index-generator -->
+<!-- TODO: Add explainer on automated-codejson-generator -->
