@@ -39,6 +39,7 @@
                 "properties": {
                     "licenses": {
                         "type": "array",
+                        "description": "License(s) for the release",
                         "items": {
                             "type": "object",
                             "properties": {
@@ -65,7 +66,7 @@
                                 "URL": {
                                     "type": "string",
                                     "format": "uri",
-                                    "description": "The URL of the release license"
+                                    "description": "The URL of the release license in the repository"
                                 }
                             },
                             "required": [
@@ -128,7 +129,7 @@
             },
             "laborHours": {
                 "type": "number",
-                "description": "Labor hours invested in the project"
+                "description": "Labor hours invested in the project. Calculated using COCOMO measured by the SCC tool: https://github.com/boyter/scc?tab=readme-ov-file#cocomo"
             },
             "platforms": {
                 "type": "array",
@@ -307,7 +308,7 @@
                     3,
                     4
                 ],
-                "description": "Maturity model tier"
+                "description": "Maturity model tier according to the CMS OSPO's framework: https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md"
             }
         }
     },
