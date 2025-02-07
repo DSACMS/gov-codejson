@@ -35,7 +35,6 @@ An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAI
 
 ## Repository Structure
 
-
 ##### Documentation
 
 - [schemas](./schemas)
@@ -65,9 +64,7 @@ git clone https://github.com/DSACMS/gov-codejson
 
 ## Coding Style and Linters
 
-<!-- TODO - Add the repo's linting and code style guidelines -->
-
-Lint and code tests are run on each commit, so linters and tests should be run locally before committing.
+N/A
 
 ## Branching Model
 
