@@ -111,7 +111,7 @@ Information about how the gov-codejson community is governed may be found in [GO
 
 If you would like to comment on the metadata standard, please let us know by filing an **issue on our GitHub repository.**
 
-We are open to adding more fields to code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
+We are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
 
 If you have ideas for how we can improve or add to our capacity building efforts and methods for welcoming people into our community, please let us know at opensource@cms.hhs.gov.
 

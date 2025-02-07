@@ -430,3 +430,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     </tr>
   </tbody>
 </table>
+
+### Adding new metadata fields
+
+We are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
