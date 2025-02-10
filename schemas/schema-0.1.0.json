@@ -355,7 +355,7 @@
                     3,
                     4
                 ],
-                "description": "Maturity model tier according to the CMS OSPO's framework: https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md"
+                "description": "Maturity model tier according to the CMS Open Source Repository Maturity Model Framework: https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md"
             }
         }
     },
