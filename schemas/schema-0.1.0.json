@@ -301,16 +301,16 @@
                 "type": "string",
                 "description": "Home Department / Org / Group associated with the project"
             },
-            "project": {
+            "projects": {
                 "type": "array",
-                "description": "Maps repositories to projects",
+                "description": "Maps the repository to associated projects",
                 "items": { 
                     "type": "string"
                 }
             },
             "systems": {
                 "type": "array",
-                "description": "Maps repositories to CMS systems",
+                "description": "Maps the repository to CMS systems used",
                 "items": { 
                     "type": "string"
                 }
@@ -387,7 +387,7 @@
         "userInput",
         "fismaLevel",
         "group",
-        "project",
+        "projects",
         "subsetInHealthcare",
         "userType",
         "maturityModelTier"
