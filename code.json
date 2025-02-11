@@ -1,0 +1,44 @@
+{
+  "name": "gov-codejson",
+  "description": "CMS code.json: An agency-wide metadata standard for software projects",
+  "longDescription": "",
+  "status": "",
+  "permissions": {
+    "license": [
+      {
+        "name": "",
+        "URL": ""
+      }
+    ],
+    "usageType": "",
+    "exemptionText": ""
+  },
+  "organization": "",
+  "repositoryURL": "https://github.com/DSACMS/gov-codejson",
+  "vcs": "git",
+  "laborHours": 3479,
+  "platforms": [],
+  "categories": [],
+  "softwareType": "",
+  "languages": [],
+  "maintenance": "",
+  "date": {
+    "created": "2025-02-04T21:59:53Z",
+    "lastModified": "2025-02-11T18:45:30Z",
+    "metaDataLastUpdated": "2025-02-11T18:47:02.924Z"
+  },
+  "tags": [],
+  "contact": {
+    "email": "",
+    "name": ""
+  },
+  "localisation": false,
+  "repositoryType": "",
+  "userInput": false,
+  "fismaLevel": "",
+  "group": "",
+  "subsetInHealthcare": [],
+  "userType": [],
+  "repositoryHost": "github",
+  "maturityModelTier": 0
+}
