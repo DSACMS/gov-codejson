@@ -1,44 +1,44 @@
 {
   "name": "gov-codejson",
   "description": "CMS code.json: An agency-wide metadata standard for software projects",
-  "longDescription": "",
-  "status": "",
+  "longDescription": "This repository contains documentation on CMS code.json, a metadata standard used to collect information on the agency's software projects in compliance with M-16-21 and the SHARE IT Act.",
+  "status": "Production",
   "permissions": {
     "license": [
       {
-        "name": "",
-        "URL": ""
+        "name": "CC0 1.0 Universal",
+        "URL": "https://github.com/DSACMS/gov-codejson/blob/main/LICENSE"
       }
     ],
-    "usageType": "",
+    "usageType": "openSource",
     "exemptionText": ""
   },
-  "organization": "",
+  "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/gov-codejson",
   "vcs": "git",
   "laborHours": 3479,
-  "platforms": [],
-  "categories": [],
-  "softwareType": "",
-  "languages": [],
-  "maintenance": "",
+  "platforms": ["web"],
+  "categories": ["knowledge-management", "help-desk"],
+  "softwareType": "standalone/web",
+  "languages": ["Markdown"],
+  "maintenance": "internal",
   "date": {
     "created": "2025-02-04T21:59:53Z",
     "lastModified": "2025-02-11T18:45:30Z",
     "metaDataLastUpdated": "2025-02-11T18:47:02.924Z"
   },
-  "tags": [],
+  "tags": ["guide", "codejson", "OSPO", "metadata"],
   "contact": {
-    "email": "",
-    "name": ""
+    "email": "opensource@cms.hhs.gov",
+    "name": "CMS Open Source Team"
   },
   "localisation": false,
-  "repositoryType": "",
+  "repositoryType": "standards",
   "userInput": false,
-  "fismaLevel": "",
-  "group": "",
-  "subsetInHealthcare": [],
-  "userType": [],
-  "repositoryHost": "github",
-  "maturityModelTier": 0
+  "fismaLevel": "Low",
+  "group": "CMS/OA/DSAC"",
+  "subsetInHealthcare": ["Operational"],
+  "userType": ["Government"],
+  "repositoryHost": "github.com/DSACMS",
+  "maturityModelTier": 3
 }
