@@ -35,7 +35,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     <tr>
       <td>CMS fields</td>
       <td>Agency</td>
-      <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
     </tr>
     <tr>
     <td><a href="https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih">SHARE IT Act</a></td>
@@ -272,7 +272,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     <tr>
       <td>repositoryType</td>
       <td>required</td>
-      <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>str</td>
       <td>Purpose and functionality of the repository</td>
       <td>
@@ -289,7 +289,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     <tr>
       <td>userInput</td>
       <td>required</td>
-      <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>bool</td>
       <td>Does the software accept user input?</td>
       <td>
@@ -300,7 +300,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     <tr>
       <td>fismaLevel</td>
       <td>required</td>
-      <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>str</td>
       <td>FISMA security level <a href="https://security.cms.gov/learn/federal-information-security-modernization-act-fisma">link</a></td>
       <td>
@@ -312,7 +312,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     <tr>
       <td>group</td>
       <td>required</td>
-      <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>str</td>
       <td>Home Department / Org / Group associated with the project</td>
       <td></td>
@@ -320,7 +320,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     <tr>
       <td>subsetInHealthcare</td>
       <td>required</td>
-      <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>arr</td>
       <td>Healthcare-related subset</td>
       <td>
@@ -333,7 +333,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     <tr>
       <td>userType</td>
       <td>required</td>
-      <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>arr</td>
       <td>Types of users who interact with the software</td>
       <td>
@@ -345,7 +345,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     <tr>
       <td>repositoryHost</td>
       <td>required</td>
-      <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>str</td>
       <td>Location where source code is hosted</td>
       <td>
@@ -359,7 +359,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     <tr>
       <td>maturityModelTier</td>
       <td>required</td>
-      <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>int</td>
       <td>Maturity model tier</td>
       <td>1, 2, 3, 4</td>
@@ -407,7 +407,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     <tr>
       <td>project</td>
       <td>required</td>
-      <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>arr</td>
       <td>Maps repositories to projects</td>
       <td>bluebutton, codejson</td>
@@ -415,7 +415,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     <tr>
       <td>systems</td>
       <td>optional</td>
-      <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>arr</td>
       <td>Maps repositories to CMS systems</td>
       <td>idr</td>
@@ -423,7 +423,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
     <tr>
       <td>upstream</td>
       <td>optional</td>
-      <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>arr</td>
       <td>List of upstream repos used, link to SBOM.</td>
       <td>augur, uswds</td>
