@@ -113,7 +113,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
-      <td>A list of enumerated values which describes the usage permissions for the release.</td>
+      <td>A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByLaw: The sharing of the source code is restricted by law or regulation, including—but not limited to—patent or intellectual property law, the Export Asset Regulations, the International Traffic in Arms Regulation, and the Federal laws and regulations governing classified information; (4) exemptByNationalSecurity: The sharing of the source code would create an identifiable risk to the detriment of national security, confidentiality of Government information, or individual privacy; (5) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel, (6) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations; (7) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code; (8) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)</td>
       <td>
         - openSource<br>
         - governmentWideReuse<br>
@@ -425,7 +425,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
       <td>optional</td>
       <td><img src="assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>arr</td>
-      <td>List of upstream repos used</td>
+      <td>List of upstream repos used, link to SBOM.</td>
       <td>augur, uswds</td>
     </tr>
   </tbody>
