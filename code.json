@@ -36,7 +36,7 @@
   "repositoryType": "standards",
   "userInput": false,
   "fismaLevel": "Low",
-  "group": "CMS/OA/DSAC"",
+  "group": "CMS/OA/DSAC",
   "subsetInHealthcare": ["Operational"],
   "userType": ["Government"],
   "repositoryHost": "github.com/DSACMS",
