@@ -16,6 +16,6 @@ The SHARE IT Act of 2024 is legislation designed to enhance transparency, collab
 
 ### 3. What is code.json?
 `code.json` is a metadata file used by U.S. federal agencies to document and share their software projects. It provides:
-- A standardized format for describing open-source and custom-developed software.
-- Key details such as the project's name, description, license, repository URL, and agency owner.
+- A standardized format for describing open source and custom developed software.
+- Key details such as the project's name, description, license, repository URL, and labor hours.
 - Integration with government wide platforms to facilitate code sharing and reuse.
