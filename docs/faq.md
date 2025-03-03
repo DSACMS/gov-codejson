@@ -2,7 +2,6 @@
 
 ### 1. What is the Federal Source Code Policy / M-16-21?
 The Federal Source Code Policy (M-16-21) is a policy issued by the U.S. government that aims to improve software reuse and collaboration across federal agencies. It requires agencies to:
-- Release at least 20% of newly developed custom code as open source.
 - Create an inventory of their custom developed code.
 - Share code within and across agencies to reduce duplication and costs.
 - Maintain metadata records of their software assets for transparency and tracking.
