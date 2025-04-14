@@ -313,7 +313,7 @@
             },
             "systems": {
                 "type": "array",
-                "description": "CMS systems that the repository interfaces with or depends on, if any.",
+                "description": "CMS systems that the repository interfaces with or depends on, if any",
                 "items": { 
                     "type": "string"
                 }
