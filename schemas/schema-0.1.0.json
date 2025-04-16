@@ -306,21 +306,21 @@
             },
             "projects": {
                 "type": "array",
-                "description": "Project(s) that is associated or related to the repository, if any",
+                "description": "Project(s) that is associated or related to the repository, if any (e.g. Bluebutton, MPSM)",
                 "items": { 
                     "type": "string"
                 }
             },
             "systems": {
                 "type": "array",
-                "description": "CMS systems that the repository interfaces with or depends on, if any",
+                "description": "CMS systems that the repository interfaces with or depends on, if any (e.g. IDR, PECOS)",
                 "items": { 
                     "type": "string"
                 }
             },
             "upstream": {
                 "type": "string",
-                "description": "List of upstream repositories and dependencies used, in the form of a link to the SBOM (https://github.com/$ORG_NAME/$REPO_NAME/network/dependencies)"
+                "description": "Link of the upstream repositories and dependencies used, in the form of a Software Bill of Materials/SBOM (https://github.com/$ORG_NAME/$REPO_NAME/network/dependencies)"
             },
             "subsetInHealthcare": {
                 "type": "array",
