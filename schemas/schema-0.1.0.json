@@ -153,6 +153,9 @@
                 "properties": {
                     "forks": { 
                         "type": "integer" 
+                    },
+                    "clones": { 
+                        "type": "integer" 
                     }
                 },
                 "additionalProperties": true
@@ -204,7 +207,7 @@
             },
             "maintenance": {
                 "type": "string",
-                "description": "Maintenance status",
+                "description": "The dedicated staff that keeps the software up-to-date, if any",
                 "enum": [
                     "internal",
                     "contract",
@@ -213,7 +216,7 @@
                 ]
             },
             "contractNumber": {
-                "type": "integer",
+                "type": "string",
                 "description": "Contract number"
             },
             "date": {
@@ -239,7 +242,7 @@
             },
             "tags": {
                 "type": "array",
-                "description": "Tags associated with the project",
+                "description": "Topics and keywords associated with the project to improve search and discoverability",
                 "items": {
                     "type": "string"
                 }
@@ -303,24 +306,21 @@
             },
             "projects": {
                 "type": "array",
-                "description": "Maps the repository to associated projects",
+                "description": "Project(s) that is associated or related to the repository, if any (e.g. Bluebutton, MPSM)",
                 "items": { 
                     "type": "string"
                 }
             },
             "systems": {
                 "type": "array",
-                "description": "Maps the repository to CMS systems used",
+                "description": "CMS systems that the repository interfaces with or depends on, if any (e.g. IDR, PECOS)",
                 "items": { 
                     "type": "string"
                 }
             },
             "upstream": {
-                "type": "array",
-                "description": "List of upstream repositories and dependencies used",
-                "items": { 
-                    "type": "string"
-                }
+                "type": "string",
+                "description": "Link of the upstream repositories and dependencies used, in the form of a Software Bill of Materials/SBOM (https://github.com/$ORG_NAME/$REPO_NAME/network/dependencies)"
             },
             "subsetInHealthcare": {
                 "type": "array",
