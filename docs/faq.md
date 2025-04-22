@@ -25,7 +25,7 @@ No. The SHARE IT Act applies only to custom-developed code created on or after J
 
 ### Are there any source code exemptions under the SHARE IT Act?
 
-There are 4 exemptions:
+There are [4 exemptions](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih#HB45699B7E8734166BE2F6DA2A80F7909):
 
 1. Source code developed primarily for use in a national security system
 2. Source code developed by an agency, or part of an agency, that is an element of the intelligence community
@@ -34,7 +34,7 @@ There are 4 exemptions:
 
 ### Does SHARE IT Act apply to data analysis code?
 
-Yes. All custom-developed code—whether it involves software applications, data analysis, infrastructure/devops, interoperability, or internal tools/scripts—must reside in a repository, unless it qualifies for one of the four exemptions.
+Yes. All custom-developed code—whether it involves software applications, data analysis, infrastructure/devops, interoperability, or internal tools/scripts—must reside in a repository, unless it qualifies for one of the [four exemptions](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih#HB45699B7E8734166BE2F6DA2A80F7909).
 
 ## code.json Metadata Standard
 
@@ -52,7 +52,7 @@ By collecting metadata on every software project, this allows the agency to buil
 
 ### Is code.json mandatory for all repositories?
 
-Yes. As per M-16-21 and the SHARE IT Act, agencies are required to publish metadata on all custom-developed code.
+Yes. As per M-16-21 and the SHARE IT Act, agencies are required to publish metadata on all custom-developed code after August 8th 2016, which is not subject to exemptions (see: Sec 6 of [M-16-21](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf) and <a target="_blank" href="https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih#HB45699B7E8734166BE2F6DA2A80F7909">SHARE IT ACT exemptions</a>)
 
 ### I have feedback on additions and improvements to the code.json metadata standard. Where can I share this?
 
