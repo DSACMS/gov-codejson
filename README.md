@@ -1,12 +1,12 @@
 # gov-codejson
 
-CMS code.json: An agency-wide metadata standard for software projects
+code.json: An agency-wide metadata standard for software projects
 
 ## About the Project
 
-This repository contains documentation on CMS code.json, a metadata standard used to collect information on the agency's software projects in compliance with [M-16-21](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf) and the [SHARE IT Act](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih).
+This repository contains documentation on code.json, a metadata standard used to collect information on the agency's software projects in compliance with [M-16-21](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf) and the [SHARE IT Act](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih).
 
-- [metadata.md](./docs/metadata.md): Overview on CMS code.json metadata standard
+- [metadata.md](./docs/metadata.md): Overview on code.json metadata standard
 - [schemas](./schemas): code.json generic schema and agency-level schemas
 - [procedures.md](./docs/procedures.md): Procedures and tools on creating and updating metadata
 - [examples.md](./docs/examples.md): Good examples of metadata in current agency code.json files
@@ -112,7 +112,7 @@ Information about how the gov-codejson community is governed may be found in [GO
 
 If you would like to comment on the metadata standard, please let us know by filing an **issue on our GitHub repository.**
 
-We are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
+We are open to adding more CMS fields to code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
 
 If you have ideas for how we can improve or add to our capacity building efforts and methods for welcoming people into our community, please let us know at opensource@cms.hhs.gov.
 

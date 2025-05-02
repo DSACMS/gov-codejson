@@ -56,4 +56,8 @@ Yes. As per M-16-21 and the SHARE IT Act, agencies are required to publish metad
 
 ### I have feedback on additions and improvements to the code.json metadata standard. Where can I share this?
 
-We are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
+For CMS, we are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
+
+### My agency extended the code.json schema to add more metadata fields. Where can I share this?
+
+We encourage agencies to contribute by submitting a pull request to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
