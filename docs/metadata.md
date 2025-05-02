@@ -1,13 +1,22 @@
 # Code.json
 
-CMS `code.json` is a metadata standard created to collect information on the agency's software projects. This is composed of:
+`code.json` is a metadata standard created to collect information on the agency's software projects. This is composed of:
 
 - federal code.json standard, created as part of [M-16-21](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf)
-- metadata CMS would like to collect (e.g. FISMA level, repository host, group)
 - required metadata outlined in the [SHARE IT ACT](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih) (e.g. repository visibility, contract number)
 - publiccode.yml metadata, an international metadata standard
 
 By harmonizing various standards, this opens up the opportunity to share our work not just on an agency level but also on a national and international level.
+
+The generic code.json schema can be found in the [`schemas` directory](../schemas/schema.1.0.0.json).
+
+### Extending the schema for agency use
+
+The generic schema is designed to be extensible, allowing agencies to add metadata fields that are relevant to their specific needs.
+
+For example, CMS has their [own schema](../schemas/cms/) that includes new fields such as FISMA level, subset in healthcare, and systems.
+
+We encourage agencies to contribute by submitting a pull request to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
 
 ### Fields
 

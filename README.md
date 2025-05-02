@@ -7,7 +7,7 @@ CMS code.json: An agency-wide metadata standard for software projects
 This repository contains documentation on CMS code.json, a metadata standard used to collect information on the agency's software projects in compliance with [M-16-21](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf) and the [SHARE IT Act](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih).
 
 - [metadata.md](./docs/metadata.md): Overview on CMS code.json metadata standard
-- [schemas](./schemas): code.json schema
+- [schemas](./schemas): code.json generic schema and agency schemas
 - [procedures.md](./docs/procedures.md): Procedures and tools on creating and updating metadata
 - [examples.md](./docs/metadata_examples.md): Good examples of metadata in current agency code.json files
 - [faq.md](./docs/faq.md): Frequently Asked Questions
