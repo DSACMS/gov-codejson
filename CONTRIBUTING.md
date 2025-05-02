@@ -13,7 +13,9 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 
 If you would like to comment and provide feedback on the metadata standard, please let us know by filing an **issue on our GitHub repository.**
 
-We are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
+We encourage agencies to contribute by submitting a pull request to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
+
+For CMS, we are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
 
 ### Team Specific Guidelines
 
@@ -52,7 +54,7 @@ N/A
 
 If you would like to comment on the metadata standard, please let us know by filing an **issue on our GitHub repository.**
 
-We are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
+For CMS, we are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
 
 ### Writing Pull Requests
 
@@ -102,7 +104,7 @@ Pull requests will be reviewed by the CMS Open Source Program Office team as det
 
 ## Documentation
 
-Refer to [/docs](./docs/) for information about CMS code.json metadata standard.
+Refer to [/docs](./docs/) for information about code.json metadata standard.
 
 ## Policies
 

@@ -1,7 +1,7 @@
 {
   "name": "gov-codejson",
-  "description": "CMS code.json: An agency-wide metadata standard for software projects",
-  "longDescription": "This repository contains documentation on CMS code.json, a metadata standard used to collect information on the agency's software projects in compliance with M-16-21 and the SHARE IT Act.",
+  "description": "code.json: An agency-wide metadata standard for software projects",
+  "longDescription": "This repository contains documentation on code.json, a metadata standard used to collect information on the agency's software projects in compliance with M-16-21 and the SHARE IT Act.",
   "status": "Production",
   "permissions": {
     "license": [
