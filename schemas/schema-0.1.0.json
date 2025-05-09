@@ -116,6 +116,11 @@
                 "format": "uri",
                 "description": "The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions)."
             },
+            "projectURL": {
+                "type": "string",
+                "format": "uri",
+                "description": "URL to landing page, demo, or production instance of project"
+            },
             "repositoryHost": {
                 "type": "string",
                 "description": "Location where source code is hosted",
@@ -129,7 +134,10 @@
             },
             "repositoryVisibility": {
                 "type": "string",
-                "enum": ["public", "private"],
+                "enum": [
+                    "public",
+                    "private"
+                ],
                 "description": "Visibility of repository"
             },
             "vcs": {
@@ -151,11 +159,11 @@
                 "type": "object",
                 "description": "Measures frequency of code reuse in various forms. (e.g. forks, downloads, clones)",
                 "properties": {
-                    "forks": { 
-                        "type": "integer" 
+                    "forks": {
+                        "type": "integer"
                     },
-                    "clones": { 
-                        "type": "integer" 
+                    "clones": {
+                        "type": "integer"
                     }
                 },
                 "additionalProperties": true
@@ -307,14 +315,14 @@
             "projects": {
                 "type": "array",
                 "description": "Project(s) that is associated or related to the repository, if any (e.g. Bluebutton, MPSM)",
-                "items": { 
+                "items": {
                     "type": "string"
                 }
             },
             "systems": {
                 "type": "array",
                 "description": "CMS systems that the repository interfaces with or depends on, if any (e.g. IDR, PECOS)",
-                "items": { 
+                "items": {
                     "type": "string"
                 }
             },
@@ -350,6 +358,7 @@
             "maturityModelTier": {
                 "type": "integer",
                 "enum": [
+                    0,
                     1,
                     2,
                     3,

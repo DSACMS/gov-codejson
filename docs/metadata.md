@@ -150,7 +150,40 @@ By harmonizing various standards, this opens up the opportunity to share our wor
       <td></td>
     </tr>
     <tr>
-      <td>vcs (version control system)</td>
+      <td>projectURL</td>
+      <td>optional</td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td>str</td>
+      <td>URL to landing page, demo, or production instance of project</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>repositoryHost</td>
+      <td>required</td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td>str</td>
+      <td>Location where source code is hosted</td>
+      <td>
+        - github.com/CMSgov<br>
+        - github.com/CMS-Enterprise<br>
+        - github.com/DSACMS<br>
+        - github.cms.gov<br>
+        - CCSQ GitHub
+      </td>
+    </tr>
+    <tr>
+      <td>repositoryVisibility</td>
+      <td>required</td>
+      <td>📜</td>
+      <td>str</td>
+      <td>Visibility of repository</td>
+      <td>
+        - public<br>
+        - private
+      </td>
+    </tr>
+    <tr>
+      <td>vcs</td>
       <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
@@ -172,7 +205,15 @@ By harmonizing various standards, this opens up the opportunity to share our wor
       <td></td>
     </tr>
     <tr>
-      <td>platform</td>
+      <td>reuseFrequency/forks <br> reuseFrequency/clones</td>
+      <td>required</td>
+      <td>📜</td>
+      <td>obj</td>
+      <td>Measures frequency of code reuse in various forms</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>platforms</td>
       <td>required</td>
       <td>🌎</td>
       <td>arr</td>
@@ -226,13 +267,21 @@ By harmonizing various standards, this opens up the opportunity to share our wor
       <td>required</td>
       <td>🌎📜</td>
       <td>str</td>
-      <td>Maintenance status</td>
+      <td>The dedicated staff that keeps the software up-to-date, if any</td>
       <td>
         - internal<br>
         - contract<br>
         - community<br>
         - none
       </td>
+    </tr>
+        <tr>
+      <td>contractNumber</td>
+      <td>required</td>
+      <td>📜</td>
+      <td>int</td>
+      <td>Contract number</td>
+      <td></td>
     </tr>
     <tr>
       <td>date/created <br> date/lastModified date/metadataLastUpdated</td>
@@ -247,7 +296,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
       <td>required</td>
       <td>🇺🇸</td>
       <td>arr</td>
-      <td>Tags associated with the project</td>
+      <td>Topics and keywords associated with the project to improve search and discoverability</td>
       <td></td>
     </tr>
     <tr>
@@ -257,6 +306,19 @@ By harmonizing various standards, this opens up the opportunity to share our wor
       <td>obj</td>
       <td>Point of contact for the release<br>Email of point of contact<br>Name of point of contact</td>
       <td></td>
+    </tr>
+        <tr>
+      <td>feedbackMechanisms</td>
+      <td>required</td>
+      <td>📜</td>
+      <td>arr</td>
+      <td>Array of methods repositories receive feedback. Default value is the URL to GitHub repository issues</td>
+      <td>
+        - Submitting issues to repo<br>
+        - Submitting PRs to repo<br>
+        - Project website<br>
+        - Email
+      </td>
     </tr>
     <tr>
       <td>localisation</td>
@@ -302,7 +364,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
       <td>required</td>
       <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>str</td>
-      <td>FISMA security level <a href="https://security.cms.gov/learn/federal-information-security-modernization-act-fisma">link</a></td>
+      <td>Level of security categorization assigned to an information system under the Federal Information Security Modernization Act (FISMA): <a href="https://security.cms.gov/learn/federal-information-security-modernization-act-fisma">link</a></td>
       <td>
         - low<br>
         - moderate<br>
@@ -318,6 +380,30 @@ By harmonizing various standards, this opens up the opportunity to share our wor
       <td></td>
     </tr>
     <tr>
+      <td>project</td>
+      <td>required</td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td>arr</td>
+      <td>Project(s) that is associated or related to the repository, if any.</td>
+      <td>Bluebutton, MPSM, codejson</td>
+    </tr>
+    <tr>
+      <td>systems</td>
+      <td>optional</td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td>arr</td>
+      <td>CMS systems that the repository interfaces with or depends on, if any.</td>
+      <td>IDR, PECOS</td>
+    </tr>
+    <tr>
+      <td>upstream</td>
+      <td>optional</td>
+      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
+      <td>arr</td>
+      <td>Link of the upstream repositories and dependencies used, in the form of a Software Bill of Materials/SBOM (https://github.com/$ORG_NAME/$REPO_NAME/network/dependencies)</td>
+      <td>augur, uswds</td>
+    </tr>
+        <tr>
       <td>subsetInHealthcare</td>
       <td>required</td>
       <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
@@ -343,93 +429,17 @@ By harmonizing various standards, this opens up the opportunity to share our wor
       </td>
     </tr>
     <tr>
-      <td>repositoryHost</td>
-      <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
-      <td>str</td>
-      <td>Location where source code is hosted</td>
-      <td>
-        - github.com/CMSgov<br>
-        - github.com/CMS-Enterprise<br>
-        - github.com/DSACMS<br>
-        - github.cms.gov<br>
-        - CCSQ GitHub
-      </td>
-    </tr>
-    <tr>
       <td>maturityModelTier</td>
       <td>required</td>
       <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>int</td>
       <td>Maturity model tier</td>
-      <td>1, 2, 3, 4</td>
-    </tr>
-    <tr>
-      <td>contractNumber</td>
-      <td>required</td>
-      <td>📜</td>
-      <td>int</td>
-      <td>Contract number</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>repositoryVisibility</td>
-      <td>required</td>
-      <td>📜</td>
-      <td>str</td>
-      <td>Visibility of repository</td>
-      <td>
-        - public<br>
-        - private
-      </td>
-    </tr>
-    <tr>
-      <td>reuseFrequency/forks <br> reuseFrequency/downloads</td>
-      <td>required</td>
-      <td>📜</td>
-      <td>obj</td>
-      <td>Measures frequency of code reuse in various forms</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>feedbackMechanisms</td>
-      <td>required</td>
-      <td>📜</td>
-      <td>arr</td>
-      <td>Array of methods repositories receive feedback. Default value is the URL to GitHub repository issues</td>
-      <td>
-        - Submitting issues to repo<br>
-        - Submitting PRs to repo<br>
-        - Project website<br>
-        - Email
-      </td>
-    </tr>
-    <tr>
-      <td>project</td>
-      <td>required</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
-      <td>arr</td>
-      <td>Maps repositories to projects</td>
-      <td>bluebutton, codejson</td>
-    </tr>
-    <tr>
-      <td>systems</td>
-      <td>optional</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
-      <td>arr</td>
-      <td>Maps repositories to CMS systems</td>
-      <td>idr</td>
-    </tr>
-    <tr>
-      <td>upstream</td>
-      <td>optional</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
-      <td>arr</td>
-      <td>List of upstream repos used, link to SBOM.</td>
-      <td>augur, uswds</td>
+      <td>0, 1, 2, 3, 4</td>
     </tr>
   </tbody>
 </table>
+
+Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
 
 ### Adding new metadata fields
 
