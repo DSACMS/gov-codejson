@@ -116,6 +116,11 @@
                 "format": "uri",
                 "description": "The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions)."
             },
+            "projectURL": {
+                "type": "string",
+                "format": "uri",
+                "description": "URL to landing page, demo or production instance of project"
+            },
             "repositoryHost": {
                 "type": "string",
                 "description": "Location where source code is hosted",
