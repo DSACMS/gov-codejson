@@ -119,7 +119,7 @@
             "projectURL": {
                 "type": "string",
                 "format": "uri",
-                "description": "URL to landing page, demo or production instance of project"
+                "description": "URL to landing page, demo, or production instance of project"
             },
             "repositoryHost": {
                 "type": "string",
