@@ -154,7 +154,7 @@ By harmonizing various standards, this opens up the opportunity to share our wor
       <td>optional</td>
       <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>str</td>
-      <td>URL to landing page, demo or production instance of project</td>
+      <td>URL to landing page, demo, or production instance of project</td>
       <td></td>
     </tr>
     <tr>
