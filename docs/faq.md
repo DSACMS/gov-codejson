@@ -52,8 +52,14 @@ By collecting metadata on every software project, this allows the agency to buil
 
 ### Is code.json mandatory for all repositories?
 
-Yes. As per M-16-21 and the SHARE IT Act, agencies are required to publish metadata on all custom-developed code after August 8th 2016, which is not subject to exemptions (see: Sec 6 of [M-16-21](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf) and <a target="_blank" href="https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih#HB45699B7E8734166BE2F6DA2A80F7909">SHARE IT ACT exemptions</a>)
+Yes. As per M-16-21, agencies are required to publish metadata on all custom-developed code after August 8th 2016, which is not subject to exemptions (see: Sec 6 of M-16-21 and
+
+As per the SHARE IT Act, agencies are required to publish metadata on all custom-developed code after July 22, 2025, which is not subject to exemptions (see: [SHARE IT ACT exemptions](https://www.congress.gov/118/plaws/publ187/PLAW-118publ187.pdf)).
 
 ### I have feedback on additions and improvements to the code.json metadata standard. Where can I share this?
 
 We are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
+
+### My agency extended the code.json schema to add more metadata fields. Where can I share this?
+
+We encourage agencies to contribute by submitting a pull request to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
