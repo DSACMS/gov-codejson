@@ -52,7 +52,7 @@ By collecting metadata on every software project, this allows the agency to buil
 
 ### Is code.json mandatory for all repositories?
 
-Yes. As per M-16-21, agencies are required to publish metadata on all custom-developed code after August 8th 2016, which is not subject to exemptions (see: Sec 6 of M-16-21 and
+Yes. As per M-16-21, agencies are required to publish metadata on all custom-developed code after August 8th 2016, which is not subject to exemptions (see: Sec 6 of [M-16-21](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf)).
 
 As per the SHARE IT Act, agencies are required to publish metadata on all custom-developed code after July 22, 2025, which is not subject to exemptions (see: [SHARE IT ACT exemptions](https://www.congress.gov/118/plaws/publ187/PLAW-118publ187.pdf)).
 
