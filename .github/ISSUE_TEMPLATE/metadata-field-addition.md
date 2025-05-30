@@ -1,18 +1,18 @@
 ---
 name: Metadata Field Addition
-about: Suggest a field to add to code.json schema
+about: Suggest a field to add to CMS code.json schema
 title: "[METADATA]"
 labels: schema
 assignees: natalialuzuriaga
 ---
 
-## Issue Report - Metadata
+## Request - Metadata
 
-module-name: One line summary of the issue (less than 72 characters)
+This issue serves as a request to add new fields to the CMS code.json schema. For more information, please visit: https://github.com/DSACMS/gov-codejson/blob/main/docs/metadata.md#adding-new-metadata-fields
 
 ### Proposed Field information
 
-Fill out the information below on the new proposed field. Please refer to the structure of the code.json fields found here: https://github.com/DSACMS/gov-codejson/blob/main/schemas/schema-0.1.0.json
+Fill out the information below on the new proposed field. Please refer to the structure of the code.json fields found here: https://github.com/DSACMS/gov-codejson/blob/main/schemas/schema-1.0.0.json
 
 ```
 "key-name-here": {

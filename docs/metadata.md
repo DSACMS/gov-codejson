@@ -16,7 +16,7 @@ The generic schema is designed to be extensible, allowing agencies to add metada
 
 For example, CMS has their [own schema](../schemas/cms/) that includes new fields such as FISMA level, subset in healthcare, and systems.
 
-We encourage agencies to contribute by submitting a pull request to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
+We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/DSACMS/gov-codejson/issues) to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
 
 ### Fields
 
