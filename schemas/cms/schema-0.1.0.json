@@ -114,7 +114,7 @@
             "repositoryURL": {
                 "type": "string",
                 "format": "uri",
-                "description": "The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions)."
+                "description": "The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions). It can be listed as 'private' for repositories that are closed."
             },
             "projectURL": {
                 "type": "string",
