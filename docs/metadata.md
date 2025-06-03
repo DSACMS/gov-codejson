@@ -448,7 +448,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
   </tbody>
 </table>
 
-Full schema can be found in [schema-0.1.0.json](../schemas/schema-0.1.0.json).
+Full schema can be found in [schema-1.0.0.json](../schemas/schema-1.0.0.json).
 
 ### Adding new metadata fields
 
