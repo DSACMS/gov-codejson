@@ -155,7 +155,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
-      <td>The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions).</td>
+      <td>The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions). It can be listed as 'private' for repositories that are closed.</td>
       <td></td>
     </tr>
     <tr>
