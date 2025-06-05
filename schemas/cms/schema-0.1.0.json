@@ -127,6 +127,7 @@
                 "enum": [
                     "github.com/CMSgov",
                     "github.com/CMS-Enterprise",
+                    "github.com/Enterprise-CMCS",
                     "github.com/DSACMS",
                     "github.cms.gov",
                     "CCSQ GitHub"
