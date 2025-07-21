@@ -8,7 +8,7 @@
 
 By harmonizing various standards, this opens up the opportunity to share our work not just on an agency level but also on a national and international level.
 
-The generic code.json schema can be found in the [`schemas` directory](../schemas/schema.1.0.0.json).
+The generic code.json schema can be found in the [`schemas` directory](../schemas/schema-1.0.0.json).
 
 ### Extending the schema for agency use
 
