@@ -1,0 +1,26 @@
+name: json-validate 
+on:
+    pull_request:
+        types: [opened, synchronize]
+    # Paths can be used to only trigger actions when you have edited checklist files
+        branches:
+        - 'main'
+        paths:
+        - './schemas'
+
+permissions:
+  contents: read
+  pull-requests: write # enable write permissions for pull request comments
+
+jobs:
+  json-yaml-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: json-yaml-validate
+        id: json-yaml-validate
+        uses: GrantBirki/json-yaml-validate@v3.3.2 # replace with the latest version
+        with:
+          comment: "true"
+          json_schema_version: "draft-04"
