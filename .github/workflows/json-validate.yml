@@ -5,8 +5,6 @@ on:
     # Paths can be used to only trigger actions when you have edited checklist files
         branches:
         - 'main'
-        paths:
-        - 'schemas'
 
 permissions:
   contents: read
