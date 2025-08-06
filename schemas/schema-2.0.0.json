@@ -10,8 +10,7 @@
         },
         "description": {
             "type": "string",
-            "description": "A short description of the project. It should be a single line containing a single sentence. Maximum 150 characters are allowed.",
-            "maxLength": 150
+            "description": "A one or two sentence description of the software."
         },
         "status": {
             "type": "string",
@@ -212,11 +211,9 @@
             }
         },
         "feedbackMechanisms": {
-            "type": "array",
-            "description": "Methods a repository receives feedback from the community. Default value is the URL to GitHub repository issues page.",
-            "items": {
-                "type": "string"
-            }
+            "type": "string",
+            "format": "uri",
+            "description": "Method a repository receives feedback from the community (i.e. URL to GitHub repository issues page)"
         },
         "AIUseCaseInventory": {
             "type": "boolean",
