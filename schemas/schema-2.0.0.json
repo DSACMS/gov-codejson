@@ -1,0 +1,247 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "code.json metadata",
+    "description": "A metadata standard for software repositories",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Name of the project or software"
+        },
+        "description": {
+            "type": "string",
+            "description": "A one or two sentence description of the software."
+        },
+        "status": {
+            "type": "string",
+            "enum": [
+                "Ideation",
+                "Development",
+                "Alpha",
+                "Beta",
+                "Release Candidate",
+                "Production",
+                "Archival"
+            ],
+            "description": "Development status of the project"
+        },
+        "permissions": {
+            "type": "object",
+            "description": "An object containing description of the usage/restrictions regarding the release",
+            "properties": {
+                "licenses": {
+                    "type": "array",
+                    "description": "License(s) for the release",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "enum": [
+                                    "CC0-1.0",
+                                    "Apache-2.0",
+                                    "MIT",
+                                    "MPL-2.0",
+                                    "GPL-2.0-only",
+                                    "GPL-3.0-only",
+                                    "GPL-3.0-or-later",
+                                    "LGPL-2.1-only",
+                                    "LGPL-3.0-only",
+                                    "BSD-2-Clause",
+                                    "BSD-3-Clause",
+                                    "EPL-2.0",
+                                    "Other",
+                                    "None"
+                                ],
+                                "description": "An abbreviation for the name of the license"
+                            },
+                            "URL": {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "The URL of the release license in the repository"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "URL"
+                        ]
+                    }
+                },
+                "usageType": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "openSource",
+                            "governmentWideReuse",
+                            "exemptByNationalSecurity",
+                            "exemptByIntelligence",
+                            "exemptByFOIA",
+                            "exemptByEAR",
+                            "exemptByITAR",
+                            "exemptByTSA",
+                            "exemptByClassifiedInformation",
+                            "exemptByPrivacyRisk",
+                            "exemptByAgencySystem",
+                            "exemptByAgencyMission",
+                            "exemptByCIO",
+                            "exemptByPolicyDate"
+                        ]
+                    },
+                    "description": "A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByIPRestriction: The sharing of the source code is limited by patent or intellectual property restrictions; (12) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel; (13) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations;  (14) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code;  (15) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)",
+                    "additionalProperties": false
+                },
+                "exemptionText": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used."
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "licenses",
+                "usageType"
+            ]
+        },
+        "organization": {
+            "type": "string",
+            "description": "Organization responsible for the project",
+            "enum": [
+                "The organization or component within the agency to which the releases listed belong. For example, '18F' or 'Navy'."
+            ]
+        },
+        "repositoryURL": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions). It can be listed as 'private' for repositories that are closed."
+        },
+        "repositoryVisibility": {
+            "type": "string",
+            "enum": [
+                "public",
+                "private"
+            ],
+            "description": "Visibility of repository"
+        },
+        "vcs": {
+            "type": "string",
+            "description": "Version control system used",
+            "enum": [
+                "git",
+                "hg",
+                "svn",
+                "rcs",
+                "bzr"
+            ]
+        },
+        "laborHours": {
+            "type": "number",
+            "description": "Labor hours invested in the project. Calculated using COCOMO measured by the SCC tool: https://github.com/boyter/scc?tab=readme-ov-file#cocomo"
+        },
+        "reuseFrequency": {
+            "type": "object",
+            "description": "Measures frequency of code reuse in various forms. (e.g. forks, downloads, clones)",
+            "properties": {
+                "forks": {
+                    "type": "integer"
+                },
+                "clones": {
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": true
+        },
+        "maintenance": {
+            "type": "string",
+            "description": "The dedicated staff that keeps the software up-to-date, if any",
+            "enum": [
+                "internal",
+                "contract",
+                "community",
+                "none"
+            ]
+        },
+        "contractNumber": {
+            "type": "array",
+            "description": "Contract number(s) under which the project was developed",
+            "items": {
+                "type": "string"
+            }
+        },
+        "date": {
+            "type": "object",
+            "description": "A date object describing the release",
+            "properties": {
+                "created": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Creation date of project."
+                },
+                "lastModified": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date when the project was last modified"
+                },
+                "metaDataLastUpdated": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date when metadata was last updated"
+                }
+            }
+        },
+        "tags": {
+            "type": "array",
+            "description": "Topics and keywords associated with the project to improve search and discoverability",
+            "items": {
+                "type": "string"
+            }
+        },
+        "contact": {
+            "type": "object",
+            "description": "Point of contact for the release",
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "format": "email",
+                    "description": "Email address of the point of contact"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the point of contact"
+                }
+            }
+        },
+        "feedbackMechanisms": {
+            "type": "string",
+            "format": "uri",
+            "description": "Method a repository receives feedback from the community (i.e. URL to GitHub repository issues page)"
+        },
+        "AIUseCaseInventory": {
+            "type": "boolean",
+            "description": "Is the software included in the agency's AI use case inventory?"
+        }
+    },
+    "required": [
+        "name",
+        "description",
+        "status",
+        "permissions",
+        "organization",
+        "repositoryURL",
+        "repositoryVisibility",
+        "vcs",
+        "laborHours",
+        "reuseFrequency",
+        "languages",
+        "maintenance",
+        "contractNumber",
+        "date",
+        "tags",
+        "contact",
+        "feedbackMechanisms",
+        "AIUseCaseInventory"
+    ],
+    "additionalProperties": false
+}
