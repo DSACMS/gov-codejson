@@ -164,8 +164,11 @@
             ]
         },
         "contractNumber": {
-            "type": "string",
-            "description": "Contract number"
+            "type": "array",
+            "description": "Contract number(s) under which the project was developed",
+            "items": {
+                "type": "string"
+            }
         },
         "date": {
             "type": "object",
