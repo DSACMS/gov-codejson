@@ -82,6 +82,7 @@
                             "exemptByTSA",
                             "exemptByClassifiedInformation",
                             "exemptByPrivacyRisk",
+                            "exemptByIPRestriction",
                             "exemptByAgencySystem",
                             "exemptByAgencyMission",
                             "exemptByCIO",
