@@ -108,10 +108,7 @@
         },
         "organization": {
             "type": "string",
-            "description": "Organization responsible for the project",
-            "enum": [
-                "The organization or component within the agency to which the releases listed belong. For example, '18F' or 'Navy'."
-            ]
+            "description": "The organization or component within the agency to which the releases listed belong. For example, '18F' or 'Navy'."
         },
         "repositoryURL": {
             "type": "string",
