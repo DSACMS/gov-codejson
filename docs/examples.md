@@ -53,7 +53,7 @@ DedupliFHIR is a desktop app tool that uses AI deduplication to identify duplica
     "Makefile"
   ],
   "maintenance": "internal",
-  "contractNumber": "",
+  "contractNumber": [],
   "date": {
     "created": "2023-06-22T17:08:19Z",
     "lastModified": "2025-02-13T18:44:26Z",
@@ -71,9 +71,7 @@ DedupliFHIR is a desktop app tool that uses AI deduplication to identify duplica
     "email": "opensource@cms.hhs.gov",
     "name": "CMS Open Source Team"
   },
-  "feedbackMechanisms": [
-    "https://github.com/DSACMS/dedupliFHIR/issues"
-  ],
+  "feedbackMechanisms": "https://github.com/DSACMS/dedupliFHIR/issues",
   "localisation": false,
   "repositoryType": "application",
   "userInput": "true",
@@ -139,7 +137,7 @@ The CMS Metrics Website is a [tier 3](https://github.com/DSACMS/repo-scaffolder/
     "Shell"
   ],
   "maintenance": "internal",
-  "contractNumber": "",
+  "contractNumber": [],
   "date": {
     "created": "2023-07-18T14:10:58Z",
     "lastModified": "2025-06-01T11:36:12Z",
@@ -155,9 +153,7 @@ The CMS Metrics Website is a [tier 3](https://github.com/DSACMS/repo-scaffolder/
     "email": "opensource@cms.hhs.gov",
     "name": "CMS/OA/DSAC/OSPO"
   },
-  "feedbackMechanisms": [
-    "https://github.com/DSACMS/metrics/issues"
-  ],
+  "feedbackMechanisms": "https://github.com/DSACMS/metrics/issues",
   "localisation": false,
   "repositoryType": "website",
   "userInput": "No",
