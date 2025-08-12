@@ -18,7 +18,254 @@ For example, CMS has their [own schema](../schemas/cms/) that includes new field
 
 We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/DSACMS/gov-codejson/issues) to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
 
-### Fields
+### code.json Fields
+
+**Legend**
+
+<table>
+  <thead>
+    <tr>
+      <th>Metadata Standard</th>
+      <th>Origin</th>
+      <th>Icon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/GSA/code-gov-data/blob/master/schemas/schema-2.0.0.json">code.json</a></td>
+      <td>Federal</td>
+      <td>🇺🇸</td>
+    </tr>
+    <tr>
+      <td><a href="https://yml.publiccode.tools/">publiccode.yml</a></td>
+      <td>International</td>
+      <td>🌎</td>
+    </tr>
+    <tr>
+    <td><a href="https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih">SHARE IT Act</a></td>
+      <td>Federal</td>
+      <td>📜</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Presence</th>
+      <th>Source</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Options/Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>required</td>
+      <td>🇺🇸🌎</td>
+      <td>str</td>
+      <td>Name of the project or software</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>description</td>
+      <td>required</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>A short description of the project. It should be a single line containing a single sentence. Maximum 150 characters are allowed.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>status</td>
+      <td>required</td>
+      <td>🇺🇸📜</td>
+      <td>str</td>
+      <td>Development status of the project</td>
+      <td>
+        - Ideation<br>
+        - Development<br>
+        - Alpha<br>
+        - Beta<br>
+        - Release Candidate<br>
+        - Production<br>
+        - Archival
+      </td>
+    </tr>
+    <tr>
+      <td>permissions/license/url <br> permissions/license/name</td>
+      <td>required</td>
+      <td>🇺🇸🌎</td>
+      <td>obj</td>
+      <td>
+        An object containing description of the usage/restrictions regarding the release.<br><br>
+        An abbreviation for the name of the license. The URL of the release license.
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>permissions/usageType</td>
+      <td>required</td>
+      <td>🇺🇸📜</td>
+      <td>str</td>
+      <td>A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByIPRestriction: The sharing of the source code is limited by patent or intellectual property restrictions; (12) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel; (13) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations;  (14) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code;  (15) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)",
+      </td>
+      <td>
+        - openSource<br>
+        - governmentWideReuse<br>
+        - exemptByNationalSecurity<br>
+        - exemptByNationalIntelligence<br>
+        - exemptByFOIA<br>
+        - exemptByEAR<br>
+        - exemptByITAR<br>
+        - exemptByTSA<br>
+        - exemptByClassifiedInformation<br>
+        - exemptByPrivacyRisk<br>
+        - exemptByIPRestriction<br>
+        - exemptByAgencySystem<br>
+        - exemptByAgencyMission<br>
+        - exemptByCIO<br>
+        - exemptByPolicyDate
+      </td>
+    </tr>
+    <tr>
+      <td>permissions/exemptionText</td>
+      <td>optional</td>
+      <td>🇺🇸📜</td>
+      <td>str</td>
+      <td>If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>organization</td>
+      <td>required</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>The organization or component within the agency to which the releases listed belong.</td>
+      <td>Centers for Medicare & Medicaid Services, 18F, Navy</td>
+    </tr>
+    <tr>
+      <td>repositoryURL</td>
+      <td>required</td>
+      <td>🇺🇸📜</td>
+      <td>str</td>
+      <td>The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions). It can be listed as 'private' for repositories that are closed.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>repositoryVisibility</td>
+      <td>required</td>
+      <td>📜</td>
+      <td>str</td>
+      <td>Visibility of repository</td>
+      <td>
+        - public<br>
+        - private
+      </td>
+    </tr>
+    <tr>
+      <td>vcs</td>
+      <td>required</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>Version control system used</td>
+      <td>
+        - git<br>
+        - hg<br>
+        - svn<br>
+        - rcs<br>
+        - bzr
+      </td>
+    </tr>
+    <tr>
+      <td>laborHours</td>
+      <td>required</td>
+      <td>🇺🇸</td>
+      <td>int</td>
+      <td>Labor hours invested in the project. Calculated through <a href="https://github.com/boyter/scc">COCOMO & SCC tool</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>reuseFrequency/forks <br> reuseFrequency/clones</td>
+      <td>required</td>
+      <td>📜</td>
+      <td>obj</td>
+      <td>Measures frequency of code reuse in various forms</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>maintenance</td>
+      <td>required</td>
+      <td>🌎📜</td>
+      <td>str</td>
+      <td>The dedicated staff that keeps the software up-to-date, if any</td>
+      <td>
+        - internal<br>
+        - contract<br>
+        - community<br>
+        - none
+      </td>
+    </tr>
+    <tr>
+      <td>contractNumber</td>
+      <td>required</td>
+      <td>📜</td>
+      <td>array</td>
+      <td>Contract number</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>date/created <br> date/lastModified date/metadataLastUpdated</td>
+      <td>required</td>
+      <td>🇺🇸</td>
+      <td>obj</td>
+      <td>A date object describing the release</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>tags</td>
+      <td>required</td>
+      <td>🇺🇸</td>
+      <td>arr</td>
+      <td>Topics and keywords associated with the project to improve search and discoverability</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>contact/email <br> contact/name</td>
+      <td>required</td>
+      <td>🇺🇸🌎</td>
+      <td>obj</td>
+      <td>Point of contact for the release<br>Email of point of contact<br>Name of point of contact</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>feedbackMechanisms</td>
+      <td>required</td>
+      <td>📜</td>
+      <td>str</td>
+      <td>Method a repository receives feedback from the community (i.e. URL to GitHub repository issues page)</td>
+      <td>
+        - Submitting issues to repo<br>
+      </td>
+    </tr>
+    <tr>
+      <td>AIUseCaseInventory</td>
+      <td>required</td>
+      <td>📜</td>
+      <td>bool</td>
+      <td>Indicates if the software is included in the agency's AI use case inventory</td>
+      <td>
+        - true<br>
+        - false
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
+
+### CMS code.json Fields
 
 **Legend**
 
@@ -289,7 +536,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>contractNumber</td>
       <td>required</td>
       <td>📜</td>
-      <td>int</td>
+      <td>array</td>
       <td>Contract number</td>
       <td></td>
     </tr>
@@ -317,17 +564,14 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>Point of contact for the release<br>Email of point of contact<br>Name of point of contact</td>
       <td></td>
     </tr>
-        <tr>
+    <tr>
       <td>feedbackMechanisms</td>
       <td>required</td>
       <td>📜</td>
-      <td>arr</td>
-      <td>Array of methods repositories receive feedback. Default value is the URL to GitHub repository issues</td>
+      <td>str</td>
+      <td>Method a repository receives feedback from the community (i.e. URL to GitHub repository issues)</td>
       <td>
         - Submitting issues to repo<br>
-        - Submitting PRs to repo<br>
-        - Project website<br>
-        - Email
       </td>
     </tr>
     <tr>
@@ -449,7 +693,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
   </tbody>
 </table>
 
-Full schema can be found in [schema-1.0.0.json](../schemas/schema-1.0.0.json).
+Full schema can be found in [schema-0.1.0.json](../schemas/cms/schema-0.1.0.json).
 
 ### Adding new metadata fields
 

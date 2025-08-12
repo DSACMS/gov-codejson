@@ -19,6 +19,8 @@ The SHARE IT Act of 2024 is legislation designed to enhance transparency, collab
 - Standardized reporting on software development and licensing practices.
 - Establishment of metadata guidelines to ensure clear documentation and discoverability of software assets.
 
+Learn more at: https://dsacms.github.io/share-it-act-lp/
+
 ### Does the SHARE IT Act also apply retroactively to previous custom-developed code?
 
 No. The SHARE IT Act applies only to custom-developed code created on or after July 21, 2025. Code developed prior to this date is not subject to its requirements, however, code created after August 8, 2016 is subject to the Federal Source Code Policy.
@@ -35,6 +37,12 @@ There are [4 exemptions](https://www.congress.gov/bill/118th-congress/house-bill
 ### Does SHARE IT Act apply to data analysis code?
 
 Yes. All custom-developed code—whether it involves software applications, data analysis, infrastructure/devops, interoperability, or internal tools/scripts—must reside in a repository, unless it qualifies for one of the [four exemptions](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih#HB45699B7E8734166BE2F6DA2A80F7909).
+
+### When do agencies have to comply?
+The SHARE IT Act applies to custom-developed code created on or after July 21, 2025 where agencies must:
+- store custom-developed code in a repository
+- ensure code is accessible to federal employees and is owned by the agency
+- publish metadata on all custom-developed code
 
 ## code.json Metadata Standard
 
