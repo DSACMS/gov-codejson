@@ -1,0 +1,419 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "CMS Code.json Metadata",
+    "description": "A metadata standard for software repositories of CMS",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Name of the project or software"
+        },
+        "description": {
+            "type": "string",
+            "description": "A one or two sentence description of the software."
+        },
+        "longDescription": {
+            "type": "string",
+            "description": "Provide longer description of the software, between 150 and 10000 chars. It is meant to provide an overview of the capabilities of the software for a potential user.",
+            "minLength": 150,
+            "maxLength": 10000
+        },
+        "status": {
+            "type": "string",
+            "enum": [
+                "Ideation",
+                "Development",
+                "Alpha",
+                "Beta",
+                "Release Candidate",
+                "Production",
+                "Archival"
+            ],
+            "description": "Development status of the project"
+        },
+        "permissions": {
+            "type": "object",
+            "description": "An object containing description of the usage/restrictions regarding the release",
+            "properties": {
+                "licenses": {
+                    "type": "array",
+                    "description": "License(s) for the release",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "enum": [
+                                    "CC0-1.0",
+                                    "Apache-2.0",
+                                    "MIT",
+                                    "MPL-2.0",
+                                    "GPL-2.0-only",
+                                    "GPL-3.0-only",
+                                    "GPL-3.0-or-later",
+                                    "LGPL-2.1-only",
+                                    "LGPL-3.0-only",
+                                    "BSD-2-Clause",
+                                    "BSD-3-Clause",
+                                    "EPL-2.0",
+                                    "Other",
+                                    "None"
+                                ],
+                                "description": "An abbreviation for the name of the license"
+                            },
+                            "URL": {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "The URL of the release license in the repository"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "URL"
+                        ]
+                    }
+                },
+                "usageType": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "openSource",
+                            "governmentWideReuse",
+                            "exemptByNationalSecurity",
+                            "exemptByNationalIntelligence",
+                            "exemptByFOIA",
+                            "exemptByEAR",
+                            "exemptByITAR",
+                            "exemptByTSA",
+                            "exemptByClassifiedInformation",
+                            "exemptByPrivacyRisk",
+                            "exemptByIPRestriction",
+                            "exemptByAgencySystem",
+                            "exemptByAgencyMission",
+                            "exemptByCIO",
+                            "exemptByPolicyDate"
+                        ]
+                    },
+                    "description": "A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByIPRestriction: The sharing of the source code is limited by patent or intellectual property restrictions; (12) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel; (13) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations;  (14) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code;  (15) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)",
+                    "additionalProperties": false
+                },
+                "exemptionText": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used."
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "licenses",
+                "usageType"
+            ]
+        },
+        "organization": {
+            "type": "string",
+            "description": "Organization responsible for the project",
+            "enum": [
+                "Centers for Medicare & Medicaid Services"
+            ]
+        },
+        "repositoryURL": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions). It can be listed as 'private' for repositories that are closed."
+        },
+        "projectURL": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL to landing page, demo, or production instance of project"
+        },
+        "repositoryHost": {
+            "type": "string",
+            "description": "Location where source code is hosted",
+            "enum": [
+                "github.com/CMSgov",
+                "github.com/CMS-Enterprise",
+                "github.com/Enterprise-CMCS",
+                "github.com/DSACMS",
+                "github.cms.gov",
+                "CCSQ GitHub"
+            ]
+        },
+        "repositoryVisibility": {
+            "type": "string",
+            "enum": [
+                "public",
+                "private"
+            ],
+            "description": "Visibility of repository"
+        },
+        "vcs": {
+            "type": "string",
+            "description": "Version control system used",
+            "enum": [
+                "git",
+                "hg",
+                "svn",
+                "rcs",
+                "bzr"
+            ]
+        },
+        "laborHours": {
+            "type": "number",
+            "description": "Labor hours invested in the project. Calculated using COCOMO measured by the SCC tool: https://github.com/boyter/scc?tab=readme-ov-file#cocomo"
+        },
+        "reuseFrequency": {
+            "type": "object",
+            "description": "Measures frequency of code reuse in various forms. (e.g. forks, downloads, clones)",
+            "properties": {
+                "forks": {
+                    "type": "integer"
+                },
+                "clones": {
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": true
+        },
+        "platforms": {
+            "type": "array",
+            "description": "Platforms supported by the project",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "web",
+                    "windows",
+                    "mac",
+                    "linux",
+                    "ios",
+                    "android",
+                    "other"
+                ]
+            }
+        },
+        "categories": {
+            "type": "array",
+            "description": "Categories the project belongs to. Select from: https://yml.publiccode.tools/categories-list.html",
+            "items": {
+                "type": "string"
+            }
+        },
+        "softwareType": {
+            "type": "string",
+            "description": "Type of software",
+            "enum": [
+                "standalone/mobile",
+                "standalone/iot",
+                "standalone/desktop",
+                "standalone/web",
+                "standalone/backend",
+                "standalone/other",
+                "addon",
+                "library",
+                "configurationFiles"
+            ]
+        },
+        "languages": {
+            "type": "array",
+            "description": "Programming languages that make up the codebase",
+            "items": {
+                "type": "string"
+            }
+        },
+        "maintenance": {
+            "type": "string",
+            "description": "The dedicated staff that keeps the software up-to-date, if any",
+            "enum": [
+                "internal",
+                "contract",
+                "community",
+                "none"
+            ]
+        },
+        "contractNumber": {
+            "type": "array",
+            "description": "Contract number(s) under which the project was developed",
+            "items": {
+                "type": "string"
+            }
+        },
+        "date": {
+            "type": "object",
+            "description": "A date object describing the release",
+            "properties": {
+                "created": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Creation date of project."
+                },
+                "lastModified": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date when the project was last modified"
+                },
+                "metaDataLastUpdated": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Date when metadata was last updated"
+                }
+            }
+        },
+        "tags": {
+            "type": "array",
+            "description": "Topics and keywords associated with the project to improve search and discoverability",
+            "items": {
+                "type": "string"
+            }
+        },
+        "contact": {
+            "type": "object",
+            "description": "Point of contact for the release",
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "format": "email",
+                    "description": "Email address of the point of contact"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the point of contact"
+                }
+            }
+        },
+        "feedbackMechanisms": {
+            "type": "string",
+            "format": "uri",
+            "description": "Method a repository receives feedback from the community (i.e. URL to GitHub repository issues page)"
+        },
+        "AIUseCaseInventory": {
+            "type": "boolean",
+            "description": "Is the software included in the agency's AI use case inventory?"
+        },
+        "localisation": {
+            "type": "boolean",
+            "description": "Indicates if the project supports multiple languages"
+        },
+        "repositoryType": {
+            "type": "string",
+            "description": "Purpose and functionality of the repository",
+            "enum": [
+                "package",
+                "website",
+                "standards",
+                "libraries",
+                "data",
+                "application",
+                "tools",
+                "APIs"
+            ]
+        },
+        "userInput": {
+            "type": "boolean",
+            "description": "Does the software accept user input?"
+        },
+        "fismaLevel": {
+            "type": "string",
+            "description": "Level of security categorization assigned to an information system under the Federal Information Security Modernization Act (FISMA): https://security.cms.gov/learn/federal-information-security-modernization-act-fisma",
+            "enum": [
+                "Low",
+                "Moderate",
+                "High"
+            ]
+        },
+        "group": {
+            "type": "string",
+            "description": "Home Department / Org / Group associated with the project"
+        },
+        "projects": {
+            "type": "array",
+            "description": "Project(s) that is associated or related to the repository, if any (e.g. Bluebutton, MPSM)",
+            "items": {
+                "type": "string"
+            }
+        },
+        "systems": {
+            "type": "array",
+            "description": "CMS systems that the repository interfaces with or depends on, if any (e.g. IDR, PECOS)",
+            "items": {
+                "type": "string"
+            }
+        },
+        "upstream": {
+            "type": "string",
+            "description": "Link of the upstream repositories and dependencies used, in the form of a Software Bill of Materials/SBOM (https://github.com/$ORG_NAME/$REPO_NAME/network/dependencies)"
+        },
+        "subsetInHealthcare": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "Policy",
+                    "Operational",
+                    "Medicare",
+                    "Medicaid"
+                ]
+            },
+            "description": "Healthcare-related subset"
+        },
+        "userType": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "Providers",
+                    "Patients",
+                    "Government"
+                ]
+            },
+            "description": "Types of users who interact with the software"
+        },
+        "maturityModelTier": {
+            "type": "integer",
+            "enum": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "description": "Maturity model tier according to the CMS Open Source Repository Maturity Model Framework: https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md"
+        }
+    },
+    "required": [
+        "name",
+        "description",
+        "longDescription",
+        "status",
+        "permissions",
+        "organization",
+        "repositoryURL",
+        "repositoryHost",
+        "repositoryVisibility",
+        "vcs",
+        "laborHours",
+        "reuseFrequency",
+        "platforms",
+        "categories",
+        "softwareType",
+        "languages",
+        "maintenance",
+        "contractNumber",
+        "date",
+        "tags",
+        "contact",
+        "feedbackMechanisms",
+        "AIUseCaseInventory",
+        "localisation",
+        "repositoryType",
+        "userInput",
+        "fismaLevel",
+        "group",
+        "projects",
+        "subsetInHealthcare",
+        "userType",
+        "maturityModelTier"
+    ],
+    "additionalProperties": false
+}
