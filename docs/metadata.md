@@ -4,11 +4,11 @@
 
 - federal code.json standard, created as part of [M-16-21](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf)
 - required metadata outlined in the [SHARE IT ACT](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih) (e.g. repository visibility, contract number)
-- publiccode.yml metadata, an international metadata standard
+- [publiccode.yml](https://yml.publiccode.tools/) metadata, an international metadata standard
 
 By harmonizing various standards, this opens up the opportunity to share our work not just on an agency level but also on a national and international level.
 
-The generic code.json schema can be found in the [`schemas` directory](../schemas/schema-1.0.0.json).
+The generic code.json schema can be found in the [`schemas` directory](../schemas/schema-2.0.0.json).
 
 ### Extending the schema for agency use
 
@@ -74,7 +74,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
-      <td>A short description of the project. It should be a single line containing a single sentence. Maximum 150 characters are allowed.</td>
+      <td>A one or two sentence description of the software.</td>
       <td></td>
     </tr>
     <tr>
@@ -109,7 +109,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
-      <td>A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByIPRestriction: The sharing of the source code is limited by patent or intellectual property restrictions; (12) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel; (13) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations;  (14) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code;  (15) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)",
+      <td>A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByIPRestriction: The sharing of the source code is limited by patent or intellectual property restrictions; (12) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel; (13) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations;  (14) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code;  (15) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)"
       </td>
       <td>
         - openSource<br>
@@ -369,12 +369,19 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
       <td>required</td>
       <td>🇺🇸📜</td>
       <td>str</td>
-      <td>A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByLaw: The sharing of the source code is restricted by law or regulation, including—but not limited to—patent or intellectual property law, the Export Asset Regulations, the International Traffic in Arms Regulation, and the Federal laws and regulations governing classified information; (4) exemptByNationalSecurity: The sharing of the source code would create an identifiable risk to the detriment of national security, confidentiality of Government information, or individual privacy; (5) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel, (6) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations; (7) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code; (8) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)</td>
+      <td>A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByIPRestriction: The sharing of the source code is limited by patent or intellectual property restrictions; (12) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel; (13) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations;  (14) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code;  (15) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)"</td>
       <td>
         - openSource<br>
         - governmentWideReuse<br>
-        - exemptByLaw<br>
         - exemptByNationalSecurity<br>
+        - exemptByNationalIntelligence<br>
+        - exemptByFOIA<br>
+        - exemptByEAR<br>
+        - exemptByITAR<br>
+        - exemptByTSA<br>
+        - exemptByClassifiedInformation<br>
+        - exemptByPrivacyRisk<br>
+        - exemptByIPRestriction<br>
         - exemptByAgencySystem<br>
         - exemptByAgencyMission<br>
         - exemptByCIO<br>
@@ -394,7 +401,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
       <td>required</td>
       <td>🇺🇸</td>
       <td>str</td>
-      <td>Organization responsible for the project</td>
+      <td>The organization or component within the agency to which the releases listed belong.</td>
       <td>Centers for Medicare & Medicaid Services</td>
     </tr>
     <tr>
@@ -575,6 +582,17 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
       </td>
     </tr>
     <tr>
+      <td>AIUseCaseInventory</td>
+      <td>required</td>
+      <td>📜</td>
+      <td>bool</td>
+      <td>Indicates if the software is included in the agency's AI use case inventory</td>
+      <td>
+        - true<br>
+        - false
+      </td>
+    </tr>
+    <tr>
       <td>localisation</td>
       <td>required</td>
       <td>🌎</td>
@@ -693,7 +711,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
   </tbody>
 </table>
 
-Full schema can be found in [schema-0.1.0.json](../schemas/cms/schema-0.1.0.json).
+Full schema can be found in [schema-0.2.0.json](../schemas/cms/schema-0.2.0.json).
 
 ### Adding new metadata fields
 
