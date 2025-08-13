@@ -114,7 +114,7 @@
         },
         "organization": {
             "type": "string",
-            "description": "Organization responsible for the project",
+            "description": "The organization or component within the agency to which the releases listed belong.",
             "enum": [
                 "Centers for Medicare & Medicaid Services"
             ]
