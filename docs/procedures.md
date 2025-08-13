@@ -2,7 +2,7 @@
 
 The CMS Open Source Program Office developed various tools that can automate detecting, adding, and updating metadata to repositories.
 
-> **Note**: Learn more about our SHARE IT Act tools: https://dsacms.github.io/share-it-act-lp/
+> **Learn more about our SHARE IT Act tools**: https://dsacms.github.io/share-it-act-lp/
 
 ## Creating a code.json file
 
