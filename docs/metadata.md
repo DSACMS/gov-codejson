@@ -25,7 +25,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
 <table>
   <thead>
     <tr>
-      <th>Metadata Standard</th>
+      <th>Source Policy</th>
       <th>Origin</th>
       <th>Icon</th>
     </tr>
@@ -45,6 +45,11 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
     <td><a href="https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih">SHARE IT Act</a></td>
       <td>Federal</td>
       <td>📜</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-21-Accelerating-Federal-Use-of-AI-through-Innovation-Governance-and-Public-Trust.pdf">M-25-21</a></td>
+      <td>Federal</td>
+      <td>🌐</td>
     </tr>
   </tbody>
 </table>
@@ -250,14 +255,12 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       </td>
     </tr>
     <tr>
-      <td>AIUseCaseInventory</td>
+      <td>AIUseCaseID</td>
       <td>required</td>
-      <td>📜</td>
-      <td>bool</td>
-      <td>Indicates if the software is included in the agency's AI use case inventory</td>
+      <td>🌐</td>
+      <td>str</td>
+      <td>The software's ID in the AI Use Case Inventory. If the software is not currently listed in the inventory, enter '0'</td>
       <td>
-        - true<br>
-        - false
       </td>
     </tr>
   </tbody>
@@ -582,14 +585,12 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
       </td>
     </tr>
     <tr>
-      <td>AIUseCaseInventory</td>
+      <td>AIUseCaseID</td>
       <td>required</td>
-      <td>📜</td>
-      <td>bool</td>
-      <td>Indicates if the software is included in the agency's AI use case inventory</td>
+      <td>🌐</td>
+      <td>str</td>
+      <td>The software's ID in the AI Use Case Inventory. If the software is not currently listed in the inventory, enter '0'</td>
       <td>
-        - true<br>
-        - false
       </td>
     </tr>
     <tr>
