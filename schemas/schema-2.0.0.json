@@ -211,7 +211,7 @@
                 }
             }
         },
-        "feedbackMechanisms": {
+        "feedbackMechanism": {
             "type": "string",
             "format": "uri",
             "description": "Method a repository receives feedback from the community (i.e. URL to GitHub repository issues page)"
@@ -238,7 +238,7 @@
         "date",
         "tags",
         "contact",
-        "feedbackMechanisms",
+        "feedbackMechanism",
         "AIUseCaseInventory"
     ],
     "additionalProperties": false

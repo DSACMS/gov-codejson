@@ -240,7 +240,7 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td></td>
     </tr>
     <tr>
-      <td>feedbackMechanisms</td>
+      <td>feedbackMechanism</td>
       <td>required</td>
       <td>📜</td>
       <td>str</td>
@@ -572,7 +572,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
       <td></td>
     </tr>
     <tr>
-      <td>feedbackMechanisms</td>
+      <td>feedbackMechanism</td>
       <td>required</td>
       <td>📜</td>
       <td>str</td>
