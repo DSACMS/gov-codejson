@@ -1,5 +1,7 @@
 # Exemptions
 
+## [SHARE IT Act](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih) Exemptions
+
 ### Sign off on risk acceptance of open-sourcing the software product
 
 Before outbounding repositories, it’s important that the appropriate stakeholders review and acknowledge the risks and responsibilities associated with releasing the code to the public. This step ensures transparency and accountability while enabling informed decision making.
@@ -22,3 +24,14 @@ Before outbounding repositories, it’s important that the appropriate stakehold
   - [ ] International Traffic in Arms Regulations (ITAR).
   - [ ] Regulations of the Transportation Security Administration related to the protection of sensitive information.
   - [ ] Federal laws and regulations governing the sharing of classified information.
+
+## [M-16-21](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf) Exemptions
+
+### Legal Restrictions
+- [ ] I acknowledge that the sharing of the source code of this project is **NOT** limited by patent or intellectual property restrictions.
+
+### Agency Verification
+- [ ] I acknowledge that the sharing of the source code of this project would **NOT**:
+  - [ ] create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel.
+  - [ ] create an identifiable risk to agency mission, programs, or operations.
+  - [ ] be considered by the CIO as requiring exemption in the national interest.
