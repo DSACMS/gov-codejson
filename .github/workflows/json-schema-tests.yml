@@ -1,4 +1,4 @@
-name: json-validate 
+name: json-schema-tests
 on:
     pull_request:
         types: [opened, synchronize]
@@ -11,7 +11,7 @@ permissions:
   pull-requests: write # enable write permissions for pull request comments
 
 jobs:
-  json-yaml-validate:
+  json-validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,3 +22,17 @@ jobs:
         with:
           comment: "true"
           json_schema_version: "draft-04"
+          
+  schema-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install the JSON Schema CLI
+        uses: sourcemeta/jsonschema@v11.1.1
+
+      - name: Run generic schema unit tests
+        run: jsonschema test schemas/test/gov-schema.json --resolve schemas/schema-2.0.0.json
+      
+      - name: Run CMS schema unit tests
+        run: jsonschema test schemas/test/cms-schema.json --resolve schemas/cms/schema-0.2.0.json
