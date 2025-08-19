@@ -317,9 +317,9 @@
             "type": "string",
             "description": "Level of security categorization assigned to an information system under the Federal Information Security Modernization Act (FISMA): https://security.cms.gov/learn/federal-information-security-modernization-act-fisma",
             "enum": [
-                "Low",
-                "Moderate",
-                "High"
+                "low",
+                "moderate",
+                "high"
             ]
         },
         "group": {
@@ -349,10 +349,10 @@
             "items": {
                 "type": "string",
                 "enum": [
-                    "Policy",
-                    "Operational",
-                    "Medicare",
-                    "Medicaid"
+                    "policy",
+                    "operational",
+                    "medicare",
+                    "medicaid"
                 ]
             },
             "description": "Healthcare-related subset"
@@ -362,9 +362,9 @@
             "items": {
                 "type": "string",
                 "enum": [
-                    "Providers",
-                    "Patients",
-                    "Government"
+                    "providers",
+                    "patients",
+                    "government"
                 ]
             },
             "description": "Types of users who interact with the software"
