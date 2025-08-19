@@ -58,7 +58,8 @@
     "email": "opensource@cms.hhs.gov",
     "name": "CMS Open Source Team"
   },
-  "feedbackMechanisms": "https://github.com/DSACMS/gov-codejson/issues",
+  "feedbackMechanism": "https://github.com/DSACMS/gov-codejson/issues",
+  "AIUseCaseID": "0",
   "localisation": false,
   "repositoryType": "standards",
   "userInput": false,
@@ -75,6 +76,5 @@
   "userType": [
     "government"
   ],
-  "maturityModelTier": 3,
-  "AIUseCaseInventory": false
+  "maturityModelTier": 3
 }
