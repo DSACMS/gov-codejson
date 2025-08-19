@@ -1,6 +1,10 @@
 # Examples of code.json
 
-Below are good examples of metadata in CMS code.json files. We hope it helps when creating your repository-level code.json file.
+Below are examples of well-structured and comprehensive metadata in CMS code.json files. These examples demonstrate best practices for repository-level metadata documentation.
+
+For additional reference, the [test directory](../schemas/test) contains unit tests of code.json files from various DSACMS repositories. These tests help ensure consistency and compliance as we make future updates to the schemas.
+
+We encourage you to review these examples and tests when creating or updating your repository-level code.json file to maintain consistency with federal standards.
 
 ## Example 1: [DedupliFHIR](https://github.com/DSACMS/dedupliFHIR)
 
@@ -10,21 +14,20 @@ DedupliFHIR is a desktop app tool that uses AI deduplication to identify duplica
 {
   "name": "dedupliFHIR",
   "description": "Prototype for basic deduplication and aggregation of eCQM data",
-  "longDescription": "A CLI bundled with an electron front-end that provides data-linkage and AI deduplication for reported ACO data at scale.",
+  "longDescription": "A CLI bundled with an Electron.js front-end that provides data-linkage and AI deduplication for reported Accountable Care Organization (ACO) data at scale.",
   "status": "Production",
   "permissions": {
     "license": [
       {
-        "name": "CC0 1.0 Universal",
+        "name": "CC0 1.0",
         "URL": "https://github.com/DSACMS/dedupliFHIR/blob/main/LICENSE"
       }
     ],
-    "usageType": "openSource",
+    "usageType": ["openSource"],
     "exemptionText": ""
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/dedupliFHIR",
-  "projectURL": "",
   "repositoryHost": "github.com/DSACMS",
   "repositoryVisibility": "public",
   "vcs": "git",
@@ -75,17 +78,17 @@ DedupliFHIR is a desktop app tool that uses AI deduplication to identify duplica
   "AIUseCaseInventory": true,
   "localisation": false,
   "repositoryType": "application",
-  "userInput": "true",
-  "fismaLevel": "Moderate",
+  "userInput": true,
+  "fismaLevel": "moderate",
   "group": "CMS/OA/DSAC",
   "projects": [],
   "systems": [],
   "upstream": "https://github.com/DSACMS/dedupliFHIR/network/dependencies",
   "subsetInHealthcare": [
-    "Operational"
+    "operational"
   ],
   "userType": [
-    "Providers"
+    "providers"
   ],
   "maturityModelTier": "3"
 }
@@ -104,11 +107,11 @@ The CMS Metrics Website is a [tier 3](https://github.com/DSACMS/repo-scaffolder/
   "permissions": {
     "license": [
       {
-        "name": "CC0 1.0 Universal",
+        "name": "CC0 1.0",
         "URL": "https://github.com/DSACMS/metrics/blob/main/LICENSE.md"
       }
     ],
-    "usageType": "openSource",
+    "usageType": ["openSource"],
     "exemptionText": ""
   },
   "organization": "Centers for Medicare & Medicaid Services",
@@ -158,17 +161,17 @@ The CMS Metrics Website is a [tier 3](https://github.com/DSACMS/repo-scaffolder/
   "AIUseCaseInventory": true,
   "localisation": false,
   "repositoryType": "website",
-  "userInput": "No",
-  "fismaLevel": "Low",
+  "userInput": false,
+  "fismaLevel": "low",
   "group": "CMS/OA/DSAC",
   "projects": [],
   "systems": [],
   "upstream": "https://github.com/DSACMS/metrics/network/dependencies",
   "subsetInHealthcare": [
-    "Operational"
+    "operational"
   ],
   "userType": [
-    "Government"
+    "government"
   ],
   "maturityModelTier": 3
 }
