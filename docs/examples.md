@@ -74,8 +74,8 @@ DedupliFHIR is a desktop app tool that uses AI deduplication to identify duplica
     "email": "opensource@cms.hhs.gov",
     "name": "CMS Open Source Team"
   },
-  "feedbackMechanisms": "https://github.com/DSACMS/dedupliFHIR/issues",
-  "AIUseCaseInventory": true,
+  "feedbackMechanism": "https://github.com/DSACMS/dedupliFHIR/issues",
+  "AIUseCaseID": "0",
   "localisation": false,
   "repositoryType": "application",
   "userInput": true,
@@ -157,8 +157,8 @@ The CMS Metrics Website is a [tier 3](https://github.com/DSACMS/repo-scaffolder/
     "email": "opensource@cms.hhs.gov",
     "name": "CMS/OA/DSAC/OSPO"
   },
-  "feedbackMechanisms": "https://github.com/DSACMS/metrics/issues",
-  "AIUseCaseInventory": true,
+  "feedbackMechanism": "https://github.com/DSACMS/metrics/issues",
+  "AIUseCaseID": "0",
   "localisation": false,
   "repositoryType": "website",
   "userInput": false,
