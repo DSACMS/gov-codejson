@@ -1,0 +1,21 @@
+{
+    "target": "../schemas/schema-2.0.0.json",
+    "$comment": "This test suite validates CMS code.json files for compliance with the generic schema, ensuring alignment with federal government metadata standards.",
+    "tests": [
+        {
+            "description": "Example 1: DedupliFHIR",
+            "valid": true,
+            "dataPath": "./examples/example-dedupliFHIR.json"
+        },
+        {
+            "description": "Example 2: metrics",
+            "valid": true,
+            "dataPath": "./examples/example-metrics.json"
+        },
+        {
+            "description": "Example 3: gov-codejson",
+            "valid": true,
+            "dataPath": "../code.json"
+        }
+    ]
+}
