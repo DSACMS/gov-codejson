@@ -1,0 +1,78 @@
+{
+    "name": "metrics",
+    "description": "CMS Open Source Repository Metrics Website",
+    "longDescription": "The CMS Repository Metrics Website shows an overview of software development activity across open source projects within a specified organization. It is designed for developers and program managers interested in monitoring health and activity of CMS open source repositories.",
+    "status": "Production",
+    "permissions": {
+        "licenses": [
+            {
+                "name": "CC0-1.0",
+                "URL": "https://github.com/DSACMS/metrics/blob/main/LICENSE.md"
+            }
+        ],
+        "usageType": [
+            "openSource"
+        ],
+        "exemptionText": ""
+    },
+    "organization": "Centers for Medicare & Medicaid Services",
+    "repositoryURL": "https://github.com/DSACMS/metrics",
+    "projectURL": "https://dsacms.github.io/metrics/",
+    "repositoryHost": "github.com/DSACMS",
+    "repositoryVisibility": "public",
+    "vcs": "git",
+    "laborHours": 20722,
+    "reuseFrequency": {
+        "forks": 4,
+        "clones": 0
+    },
+    "platforms": [
+        "web"
+    ],
+    "categories": [
+        "data-visualization",
+        "data-analytics"
+    ],
+    "softwareType": "standalone/web",
+    "languages": [
+        "Liquid",
+        "JavaScript",
+        "CSS",
+        "Python",
+        "Shell"
+    ],
+    "maintenance": "internal",
+    "contractNumber": [],
+    "date": {
+        "created": "2023-07-18T14:10:58Z",
+        "lastModified": "2025-06-01T11:36:12Z",
+        "metaDataLastUpdated": "2025-06-06T16:36:38.949Z"
+    },
+    "tags": [
+        "metrics",
+        "ospo",
+        "repository",
+        "featured"
+    ],
+    "contact": {
+        "email": "opensource@cms.hhs.gov",
+        "name": "CMS/OA/DSAC/OSPO"
+    },
+    "feedbackMechanism": "https://github.com/DSACMS/metrics/issues",
+    "AIUseCaseID": "0",
+    "localisation": false,
+    "repositoryType": "website",
+    "userInput": false,
+    "fismaLevel": "low",
+    "group": "CMS/OA/DSAC",
+    "projects": [],
+    "systems": [],
+    "upstream": "https://github.com/DSACMS/metrics/network/dependencies",
+    "subsetInHealthcare": [
+        "operational"
+    ],
+    "userType": [
+        "government"
+    ],
+    "maturityModelTier": 3
+}

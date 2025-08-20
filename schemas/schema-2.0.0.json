@@ -151,6 +151,13 @@
             },
             "additionalProperties": true
         },
+        "languages": {
+            "type": "array",
+            "description": "Programming languages that make up the codebase",
+            "items": {
+                "type": "string"
+            }
+        },
         "maintenance": {
             "type": "string",
             "description": "The dedicated staff that keeps the software up-to-date, if any",
@@ -241,5 +248,5 @@
         "feedbackMechanism",
         "AIUseCaseID"
     ],
-    "additionalProperties": false
+    "additionalProperties": true
 }
