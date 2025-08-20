@@ -71,3 +71,7 @@ We are open to adding more fields to CMS code.json for any metadata the agency s
 ### My agency extended the code.json schema to add more metadata fields. Where can I share this?
 
 We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/DSACMS/gov-codejson/issues) to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
+
+### Does `laborHours` need to be down-to-the-minute accurate?
+
+The goal is to be as accurate as we can, and with as little burden as possible. We strive to automate labor hour calculations for public repositories whenever possible (using the [scc](https://github.com/boyter/scc) tool), but manual ballpark estimates are acceptable when precise calculation isn't feasible.
