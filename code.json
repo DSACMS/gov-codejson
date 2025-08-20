@@ -1,7 +1,7 @@
 {
   "name": "gov-codejson",
   "description": "code.json: An agency-wide metadata standard for software projects",
-  "longDescription": "This repository contains documentation on code.json, a metadata standard used to collect information on agency software projects in compliance with M-16-21 and the SHARE IT Act",
+  "longDescription": "This repository contains documentation on code.json, a metadata standard used to collect information on agency software projects in compliance with M-16-21 and the SHARE IT Act.",
   "status": "Production",
   "permissions": {
     "licenses": [
@@ -51,7 +51,7 @@
     "codejson",
     "OSPO",
     "metadata",
-    "SHARE-IT-Act",
+    "SHAREIT",
     "M-16-21"
   ],
   "contact": {
