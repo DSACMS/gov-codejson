@@ -5,12 +5,12 @@
         {
             "description": "Example 1: DedupliFHIR",
             "valid": true,
-            "dataPath": "./examples/example-dedupliFHIR.json"
+            "dataPath": "./examples/codejson-example-dedupliFHIR.json"
         },
         {
             "description": "Example 2: metrics",
             "valid": true,
-            "dataPath": "./examples/example-metrics.json"
+            "dataPath": "./examples/codejson-example-metrics.json"
         },
         {
             "description": "Example 3: gov-codejson",
