@@ -96,7 +96,9 @@ This action will create a pull request to add or update a compliant code.json fi
 
 The [codejson-index-generator](https://github.com/DSACMS/codejson-index-generator) is a Python-based tool that helps federal agencies compile and maintain their code.json files for code.gov compliance. It scans specified GitHub organizations, finds repositories containing code.json files, and combines them into a single indexed file.
 
-The tool can be run using the [index-generator-website](https://dsacms.github.io/index-generator-website/).Alternatively, follow the instructions below to run locally.
+The tool can be run using the [index-generator-website](https://dsacms.github.io/index-generator-website/). 
+
+Alternatively, follow the instructions below to run locally.
 
 #### Prerequisites
 
