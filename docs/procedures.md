@@ -4,9 +4,38 @@ The CMS Open Source Program Office developed various tools that can automate det
 
 > **Learn more about our SHARE IT Act tools**: https://dsacms.github.io/share-it-act-lp/
 
-## Creating a code.json file
+**Procedures for Project Teams**:
+[Creating a code.json file in your repository](#creating-a-codejson-file-in-your-repository)
+- [code.json generator form site](#using-form-site)
+- [automated-codejson-generator GitHub Action](#using-automated-codejson-generator)
+- [repo-scaffolder](#using-repo-scaffolder)
+
+***Procedures for Agencies**:
+[Generate an agency-index.json file for submission](#generate-an-agency-indexjson-file-for-agencies)
+- [codejson-index-generator](#using-codejson-index-generator)
+
+
+## Creating a code.json file in your repository
+
+### Using form site
+*This method works best for all repositories on all platforms.*
+
+Users can fill out a web form that creates a code.json file to be uploaded to a project's source code repository: https://dsacms.github.io/codejson-generator.
+
+
+
+### Using automated-codejson-generator
+*This method works best for repositories hosted on GitHub with GitHub Actions enabled.*
+
+The [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator) is a GitHub Action that automatically generates and maintains code.json files for federal open source repositories. It ensures schema consistency and automates metadata calculations, including:
+
+- Labor hours
+- Programming languages used
+- Repository information
+- Timestamps
 
 ### Using repo-scaffolder
+*This method is most effective when GitHub Actions are unavailable, allowing cookiecutter to be installed locally with Python.*
 
 [repo-scaffolder](https://github.com/DSACMS/repo-scaffolder) is a tool for creating repositories that adhere to repository hygiene standards. It provides file templates detailing project information, contributing guidance, maintainer roles, community involvement, and **project metadata**.
 
@@ -17,19 +46,6 @@ cookiecutter . --directory=codejson
 ```
 
 For more information on repo-scaffolder, check out the [documentation](https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#metadata-collection-using-codejson).
-
-### Using form site
-
-Users can fill out a web form that creates a code.json file to be uploaded to a project's source code repository: https://dsacms.github.io/codejson-generator.
-
-### Using automated-codejson-generator
-
-The [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator) is a GitHub Action that automatically generates and maintains code.json files for federal open source repositories. It ensures schema consistency and automates metadata calculations, including:
-
-- Labor hours
-- Programming languages used
-- Repository information
-- Timestamps
 
 #### Setting up the GitHub Action
 
@@ -74,9 +90,15 @@ jobs:
 
 This action will create a pull request to add or update a compliant code.json file in your repository.
 
+## Generate an agency-index.json file for agencies
+
 ### Using codejson-index-generator
 
 The [codejson-index-generator](https://github.com/DSACMS/codejson-index-generator) is a Python-based tool that helps federal agencies compile and maintain their code.json files for code.gov compliance. It scans specified GitHub organizations, finds repositories containing code.json files, and combines them into a single indexed file.
+
+The tool can be run using the [index-generator-website](https://dsacms.github.io/index-generator-website/). 
+
+Alternatively, follow the instructions below to run locally.
 
 #### Prerequisites
 
