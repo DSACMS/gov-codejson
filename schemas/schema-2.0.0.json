@@ -1,5 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://dsacms.github.io/code-json-schema.json",
     "title": "code.json metadata",
     "description": "A metadata standard for software repositories",
     "type": "object",
@@ -64,7 +65,8 @@
                         "required": [
                             "name",
                             "URL"
-                        ]
+                        ],
+                        "additionalProperties": false
                     }
                 },
                 "usageType": {
@@ -89,8 +91,7 @@
                             "exemptByPolicyDate"
                         ]
                     },
-                    "description": "A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByIPRestriction: The sharing of the source code is limited by patent or intellectual property restrictions; (12) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel; (13) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations;  (14) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code;  (15) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)",
-                    "additionalProperties": false
+                    "description": "A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByIPRestriction: The sharing of the source code is limited by patent or intellectual property restrictions; (12) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency's systems or personnel; (13) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations;  (14) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code;  (15) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)"
                 },
                 "exemptionText": {
                     "type": [
@@ -137,6 +138,7 @@
         },
         "laborHours": {
             "type": "number",
+            "minimum": 0,
             "description": "Labor hours invested in the project. Calculated using COCOMO measured by the SCC tool: https://github.com/boyter/scc?tab=readme-ov-file#cocomo"
         },
         "reuseFrequency": {
@@ -144,10 +146,12 @@
             "description": "Measures frequency of code reuse in various forms. (e.g. forks, downloads, clones)",
             "properties": {
                 "forks": {
-                    "type": "integer"
+                    "type": "integer",
+                    "minimum": 0
                 },
                 "clones": {
-                    "type": "integer"
+                    "type": "integer",
+                    "minimum": 0
                 }
             },
             "additionalProperties": true
@@ -157,7 +161,8 @@
             "description": "Programming languages that make up the codebase",
             "items": {
                 "type": "string"
-            }
+            },
+            "uniqueItems": true
         },
         "maintenance": {
             "type": "string",
@@ -174,7 +179,8 @@
             "description": "Contract number(s) under which the project was developed",
             "items": {
                 "type": "string"
-            }
+            },
+            "uniqueItems": true
         },
         "SBOM": {
             "type": "string",
@@ -199,14 +205,16 @@
                     "format": "date-time",
                     "description": "Date when metadata was last updated"
                 }
-            }
+            },
+            "additionalProperties": false
         },
         "tags": {
             "type": "array",
             "description": "Topics and keywords associated with the project to improve search and discoverability",
             "items": {
                 "type": "string"
-            }
+            },
+            "uniqueItems": true
         },
         "contact": {
             "type": "object",
@@ -221,7 +229,8 @@
                     "type": "string",
                     "description": "Name of the point of contact"
                 }
-            }
+            },
+            "additionalProperties": false
         },
         "feedbackMechanism": {
             "type": "string",
