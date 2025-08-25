@@ -43,6 +43,7 @@
     ],
     "maintenance": "internal",
     "contractNumber": [],
+    "SBOM": "https://github.com/DSACMS/metrics/network/dependencies",
     "date": {
         "created": "2023-07-18T14:10:58Z",
         "lastModified": "2025-06-01T11:36:12Z",

@@ -21,7 +21,7 @@ jobs:
         uses: GrantBirki/json-yaml-validate@v3.3.2 # replace with the latest version
         with:
           comment: "true"
-          json_schema_version: "draft-04"
+          json_schema_version: "draft-2020-12"
           
   schema-tests:
     runs-on: ubuntu-latest
