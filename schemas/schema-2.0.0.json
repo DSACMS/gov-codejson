@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "code.json metadata",
     "description": "A metadata standard for software repositories",
     "type": "object",
@@ -131,7 +131,8 @@
                 "hg",
                 "svn",
                 "rcs",
-                "bzr"
+                "bzr",
+                "none"
             ]
         },
         "laborHours": {
@@ -174,6 +175,10 @@
             "items": {
                 "type": "string"
             }
+        },
+        "SBOM": {
+            "type": "string",
+            "description": "Link of the upstream repositories and dependencies used, in the form of a Software Bill of Materials/SBOM. If the software does not have a SBOM, enter 'None'. (i.e. Github provides an SBOM: https://github.com/$ORG_NAME/$REPO_NAME/network/dependencies)"
         },
         "date": {
             "type": "object",
@@ -242,6 +247,7 @@
         "languages",
         "maintenance",
         "contractNumber",
+        "SBOM",
         "date",
         "tags",
         "contact",
