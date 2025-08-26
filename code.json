@@ -70,7 +70,6 @@
     "SHARE IT Act"
   ],
   "systems": [],
-  "upstream": "https://github.com/DSACMS/gov-codejson/network/dependencies",
   "subsetInHealthcare": [
     "operational"
   ],

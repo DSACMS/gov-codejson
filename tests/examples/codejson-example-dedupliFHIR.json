@@ -73,7 +73,6 @@
     "group": "CMS/OA/DSAC",
     "projects": [],
     "systems": [],
-    "upstream": "https://github.com/DSACMS/dedupliFHIR/network/dependencies",
     "subsetInHealthcare": [
         "operational"
     ],

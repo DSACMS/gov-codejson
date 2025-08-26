@@ -358,10 +358,6 @@
             },
             "uniqueItems": true
         },
-        "upstream": {
-            "type": "string",
-            "description": "Link of the upstream repositories and dependencies used, in the form of a Software Bill of Materials/SBOM (https://github.com/$ORG_NAME/$REPO_NAME/network/dependencies)"
-        },
         "subsetInHealthcare": {
             "type": "array",
             "items": {
