@@ -9,6 +9,10 @@
             "type": "string",
             "description": "Name of the project or software"
         },
+        "version": {
+            "type": "string",
+            "description": "The version for this release. For example, '1.0.0'."
+        },
         "description": {
             "type": "string",
             "description": "A one or two sentence description of the software."
@@ -124,6 +128,25 @@
             ],
             "description": "Visibility of repository"
         },
+        "homepageURL": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL of the public release homepage."
+        },
+        "downloadURL": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL where a distribution of the release can be found."
+        },
+        "disclaimerURL": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL where disclaimer language regarding the release can be found."
+        },
+        "disclaimerText": {
+            "type": "string",
+            "description": "Short paragraph that includes disclaimer language to accompany the release."
+        },
         "vcs": {
             "type": "string",
             "description": "Version control system used",
@@ -185,6 +208,66 @@
         "SBOM": {
             "type": "string",
             "description": "Link of the upstream repositories and dependencies used, in the form of a Software Bill of Materials/SBOM. If the software does not have a SBOM, enter 'None'. (i.e. Github provides an SBOM: https://github.com/$ORG_NAME/$REPO_NAME/network/dependencies)"
+        },
+        "relatedCode": {
+            "type": "array",
+            "description": "An array of affiliated government repositories that may be a part of the same project. For example,  relatedCode for 'code-gov-front-end' would include 'code-gov-api' and 'code-gov-api-client'.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the code repository, project, library or release."
+                    },
+                    "URL": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "The URL where the code repository, project, library or release can be found."
+                    },
+                    "isGovernmentRepo": {
+                        "type": "boolean",
+                        "description": "True or False. Is the code repository owned or managed by a federal agency?"
+                    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "reusedCode": {
+            "type": "array",
+            "description": "An array of government source code, libraries, frameworks, APIs, platforms or other software used in this release. For example, US Web Design Standards, cloud.gov, Federalist, Digital Services Playbook, Analytics Reporter.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the software used in this release."
+                    },
+                    "URL": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "The URL where the software can be found."
+                    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "partners": {
+            "type": "array",
+            "description": "An array of objects including an acronym for each agency partnering on the release and the contact email at such agency.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "The acronym describing the partner agency."
+                    },
+                    "email": {
+                        "type": "string",
+                        "description": "The email address for the point of contact at the partner agency."
+                    }
+                },
+                "additionalProperties": false
+            }
         },
         "date": {
             "type": "object",
