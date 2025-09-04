@@ -35,4 +35,4 @@ jobs:
         run: jsonschema test tests/gov-schema.json --resolve schemas/schema-2.0.0.json
       
       - name: Run CMS schema unit tests
-        run: jsonschema test tests/cms-schema.json --resolve schemas/cms/schema-0.2.0.json
+        run: jsonschema test tests/cms-schema.json --resolve schemas/cms/schema-2.0.0.json
