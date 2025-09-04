@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://dsacms.github.io/code-json-schema.json",
-    "title": "code.json metadata",
-    "description": "A metadata standard for software repositories",
+    "title": "CMS code.json metadata",
+    "description": "A metadata standard for software repositories of CMS",
     "type": "object",
     "properties": {
         "name": {
@@ -16,6 +16,12 @@
         "description": {
             "type": "string",
             "description": "A one or two sentence description of the software."
+        },
+        "longDescription": {
+            "type": "string",
+            "description": "Provide longer description of the software, between 150 and 10000 chars. It is meant to provide an overview of the capabilities of the software for a potential user.",
+            "minLength": 150,
+            "maxLength": 10000
         },
         "status": {
             "type": "string",
@@ -113,12 +119,27 @@
         },
         "organization": {
             "type": "string",
-            "description": "The organization or component within the agency to which the releases listed belong. For example, '18F' or 'Navy'."
+            "description": "The organization or component within the agency to which the releases listed belong.",
+            "enum": [
+                "Centers for Medicare & Medicaid Services"
+            ]
         },
         "repositoryURL": {
             "type": "string",
             "format": "uri",
             "description": "The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions). It can be listed as 'private' for repositories that are closed."
+        },
+        "repositoryHost": {
+            "type": "string",
+            "description": "Location where source code is hosted",
+            "enum": [
+                "github.com/CMSgov",
+                "github.com/CMS-Enterprise",
+                "github.com/Enterprise-CMCS",
+                "github.com/DSACMS",
+                "github.cms.gov",
+                "CCSQ GitHub"
+            ]
         },
         "repositoryVisibility": {
             "type": "string",
@@ -178,6 +199,46 @@
                 }
             },
             "additionalProperties": true
+        },
+        "platforms": {
+            "type": "array",
+            "description": "Platforms supported by the project",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "web",
+                    "windows",
+                    "mac",
+                    "linux",
+                    "ios",
+                    "android",
+                    "other"
+                ]
+            },
+            "uniqueItems": true
+        },
+        "categories": {
+            "type": "array",
+            "description": "Categories the project belongs to. Select from: https://yml.publiccode.tools/categories-list.html",
+            "items": {
+                "type": "string"
+            },
+            "uniqueItems": true
+        },
+        "softwareType": {
+            "type": "string",
+            "description": "Type of software",
+            "enum": [
+                "standalone/mobile",
+                "standalone/iot",
+                "standalone/desktop",
+                "standalone/web",
+                "standalone/backend",
+                "standalone/other",
+                "addon",
+                "library",
+                "configurationFiles"
+            ]
         },
         "languages": {
             "type": "array",
@@ -323,19 +384,113 @@
         "AIUseCaseID": {
             "type": "string",
             "description": "The software's ID in the AI Use Case Inventory. If the software is not currently listed in the inventory, enter '0'."
+        },
+        "localisation": {
+            "type": "boolean",
+            "description": "Indicates if the project supports multiple languages"
+        },
+        "repositoryType": {
+            "type": "string",
+            "description": "Purpose and functionality of the repository",
+            "enum": [
+                "package",
+                "website",
+                "standards",
+                "libraries",
+                "data",
+                "application",
+                "tools",
+                "APIs"
+            ]
+        },
+        "userInput": {
+            "type": "boolean",
+            "description": "Does the software accept user input?"
+        },
+        "fismaLevel": {
+            "type": "string",
+            "description": "Level of security categorization assigned to an information system under the Federal Information Security Modernization Act (FISMA): https://security.cms.gov/learn/federal-information-security-modernization-act-fisma",
+            "enum": [
+                "low",
+                "moderate",
+                "high"
+            ]
+        },
+        "group": {
+            "type": "string",
+            "description": "Home Department / Org / Group associated with the project"
+        },
+        "projects": {
+            "type": "array",
+            "description": "Project(s) that is associated or related to the repository, if any (e.g. Bluebutton, MPSM)",
+            "items": {
+                "type": "string"
+            },
+            "uniqueItems": true
+        },
+        "systems": {
+            "type": "array",
+            "description": "CMS systems that the repository interfaces with or depends on, if any (e.g. IDR, PECOS)",
+            "items": {
+                "type": "string"
+            },
+            "uniqueItems": true
+        },
+        "subsetInHealthcare": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "policy",
+                    "operational",
+                    "medicare",
+                    "medicaid"
+                ]
+            },
+            "description": "Healthcare-related subset",
+            "uniqueItems": true
+        },
+        "userType": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "providers",
+                    "patients",
+                    "government"
+                ]
+            },
+            "description": "Types of users who interact with the software",
+            "uniqueItems": true
+        },
+        "maturityModelTier": {
+            "type": "integer",
+            "enum": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "description": "Maturity model tier according to the CMS Open Source Repository Maturity Model Framework: https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md"
         }
     },
     "required": [
         "name",
         "description",
+        "longDescription",
         "status",
         "permissions",
         "organization",
         "repositoryURL",
+        "repositoryHost",
         "repositoryVisibility",
         "vcs",
         "laborHours",
         "reuseFrequency",
+        "platforms",
+        "categories",
+        "softwareType",
         "languages",
         "maintenance",
         "contractNumber",
@@ -344,7 +499,16 @@
         "tags",
         "contact",
         "feedbackMechanism",
-        "AIUseCaseID"
+        "AIUseCaseID",
+        "localisation",
+        "repositoryType",
+        "userInput",
+        "fismaLevel",
+        "group",
+        "projects",
+        "subsetInHealthcare",
+        "userType",
+        "maturityModelTier"
     ],
-    "additionalProperties": true
+    "additionalProperties": false
 }
