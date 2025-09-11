@@ -1,0 +1,55 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Code.gov Inventory",
+    "description": "A federal source code catalog",
+    "type": "object",
+    "required": [
+        "version",
+        "measurementType",
+        "agency",
+        "releases"
+    ],
+    "properties": {
+        "agency": {
+            "description": "The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual.",
+            "type": "string"
+        },
+        "measurementType": {
+            "type": "object",
+            "properties": {
+                "ifOther": {
+                    "description": "A one- or two- sentence description of the measurement type used, if 'other' is selected as the value of 'method' field.",
+                    "type": "string"
+                },
+                "method": {
+                    "description": "An enumerated list of methods for measuring the open source requirement.",
+                    "type": "string",
+                    "enum": [
+                        "linesOfCode",
+                        "modules",
+                        "cost",
+                        "projects",
+                        "systems",
+                        "other"
+                    ]
+                }
+            },
+            "additionalProperties": false
+        },
+        "releases": {
+            "type": "array",
+            "items": {
+                "allOf": [
+                    {
+                        "$ref": "../schema-2.0.0.json"
+                    }
+                ]
+            },
+            "additionalProperties": false
+        },
+        "version": {
+            "description": "The version of the metadata schema in use. Implements semantic versioning 2.0.0 rules as defined at http://semver.org",
+            "type": "string"
+        }
+    }
+}
