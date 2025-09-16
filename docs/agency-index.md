@@ -39,12 +39,12 @@ To create an agency-index.json:
       <td>str</td>
       <td>An enumerated list of methods for measuring the open source requirement.</td>
       <td>
-        - linesOfCode
-        - modules
-        - cost
-        - projects
-        - systems
-        - other
+        - linesOfCode<br>
+        - modules<br>
+        - cost<br>
+        - projects<br>
+        - systems<br>
+        - other<br>
       </td>
     </tr>
     <tr>
