@@ -75,6 +75,14 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td></td>
     </tr>
     <tr>
+      <td>version</td>
+      <td>optional</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>The version for this release</td>
+      <td></td>
+    </tr>
+    <tr>
       <td>description</td>
       <td>required</td>
       <td>🇺🇸</td>
@@ -170,6 +178,38 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       </td>
     </tr>
     <tr>
+      <td>homepageURL</td>
+      <td>optional</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>The URL of the public release homepage</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>downloadURL</td>
+      <td>optional</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>The URL where a distribution of the release can be found</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>disclaimerURL</td>
+      <td>optional</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>The URL where disclaimer language regarding the release can be found</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>disclaimerText</td>
+      <td>optional</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>Short paragraph that includes disclaimer language to accompany the release</td>
+      <td></td>
+    </tr>
+    <tr>
       <td>vcs</td>
       <td>required</td>
       <td>🇺🇸</td>
@@ -200,6 +240,14 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td></td>
     </tr>
     <tr>
+      <td>languages</td>
+      <td>required</td>
+      <td>🇺🇸</td>
+      <td>arr</td>
+      <td>Programming languages that make up the codebase</td>
+      <td></td>
+    </tr>
+    <tr>
       <td>maintenance</td>
       <td>required</td>
       <td>🌎📜</td>
@@ -218,6 +266,44 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
       <td>📜</td>
       <td>array</td>
       <td>Contract number</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SBOM</td>
+      <td>required</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>Link of the upstream repositories and dependencies used, in the form of a Software Bill of Materials/SBOM. If the software does not have a SBOM, enter 'None'. (i.e. Github provides an SBOM: https://github.com/$ORG_NAME/$REPO_NAME/network/dependencies)</td>
+      <td></td>
+    </tr>
+     <tr>
+      <td>relatedCode/name <br> relatedCode/URL <br> relatedCode/isGovernmentRepo</td>
+      <td>optional</td>
+      <td>🇺🇸</td>
+      <td>obj</td>
+      <td>An array of affiliated government repositories that may be a part of the same project</td>
+      <td>relatedCode for 'code-gov-front-end' would include 'code-gov-api' and 'code-gov-api-client'</td>
+    </tr>
+    <tr>
+      <td>reusedCode/name <br> reusedCode/URL</td>
+      <td>optional</td>
+      <td>🇺🇸</td>
+      <td>obj</td>
+      <td>An array of government source code, libraries, frameworks, APIs, platforms or other software used in this release</td>
+      <td>
+        - US Web Design Standards<br>
+        - cloud.gov<br>
+        - Federalist<br>
+        - Digital Services Playbook<br>
+        - Analytics Reporter<br>
+      </td>
+    </tr>
+    <tr>
+      <td>partners/name <br> partners/email</td>
+      <td>optional</td>
+      <td>🇺🇸</td>
+      <td>obj</td>
+      <td>An array of objects including an acronym for each agency partnering on the release and the contact email at such agency</td>
       <td></td>
     </tr>
     <tr>
@@ -325,6 +411,14 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
       <td></td>
     </tr>
     <tr>
+      <td>version</td>
+      <td>optional</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>The version for this release</td>
+      <td></td>
+    </tr>
+    <tr>
       <td>description</td>
       <td>required</td>
       <td>🇺🇸</td>
@@ -416,14 +510,6 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
       <td></td>
     </tr>
     <tr>
-      <td>projectURL</td>
-      <td>optional</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
-      <td>str</td>
-      <td>URL to landing page, demo, or production instance of project</td>
-      <td></td>
-    </tr>
-    <tr>
       <td>repositoryHost</td>
       <td>required</td>
       <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
@@ -448,6 +534,38 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
         - public<br>
         - private
       </td>
+    </tr>
+        <tr>
+      <td>homepageURL</td>
+      <td>optional</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>The URL of the public release homepage</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>downloadURL</td>
+      <td>optional</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>The URL where a distribution of the release can be found</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>disclaimerURL</td>
+      <td>optional</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>The URL where disclaimer language regarding the release can be found</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>disclaimerText</td>
+      <td>optional</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>Short paragraph that includes disclaimer language to accompany the release</td>
+      <td></td>
     </tr>
     <tr>
       <td>vcs</td>
@@ -542,12 +660,50 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
         - none
       </td>
     </tr>
-        <tr>
+    <tr>
       <td>contractNumber</td>
       <td>required</td>
       <td>📜</td>
       <td>array</td>
       <td>Contract number</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SBOM</td>
+      <td>required</td>
+      <td>🇺🇸</td>
+      <td>str</td>
+      <td>Link of the upstream repositories and dependencies used, in the form of a Software Bill of Materials/SBOM. If the software does not have a SBOM, enter 'None'. (i.e. Github provides an SBOM: https://github.com/$ORG_NAME/$REPO_NAME/network/dependencies)</td>
+      <td></td>
+    </tr>
+     <tr>
+      <td>relatedCode/name <br> relatedCode/URL <br> relatedCode/isGovernmentRepo</td>
+      <td>optional</td>
+      <td>🇺🇸</td>
+      <td>obj</td>
+      <td>An array of affiliated government repositories that may be a part of the same project</td>
+      <td>relatedCode for 'code-gov-front-end' would include 'code-gov-api' and 'code-gov-api-client'</td>
+    </tr>
+    <tr>
+      <td>reusedCode/name <br> reusedCode/URL</td>
+      <td>optional</td>
+      <td>🇺🇸</td>
+      <td>obj</td>
+      <td>An array of government source code, libraries, frameworks, APIs, platforms or other software used in this release</td>
+      <td>
+        - US Web Design Standards<br>
+        - cloud.gov<br>
+        - Federalist<br>
+        - Digital Services Playbook<br>
+        - Analytics Reporter<br>
+      </td>
+    </tr>
+    <tr>
+      <td>partners/name <br> partners/email</td>
+      <td>optional</td>
+      <td>🇺🇸</td>
+      <td>obj</td>
+      <td>An array of objects including an acronym for each agency partnering on the release and the contact email at such agency</td>
       <td></td>
     </tr>
     <tr>
@@ -653,7 +809,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
       <td></td>
     </tr>
     <tr>
-      <td>project</td>
+      <td>projects</td>
       <td>required</td>
       <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
       <td>arr</td>
@@ -669,14 +825,6 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
       <td>IDR, PECOS</td>
     </tr>
     <tr>
-      <td>upstream</td>
-      <td>optional</td>
-      <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
-      <td>arr</td>
-      <td>Link of the upstream repositories and dependencies used, in the form of a Software Bill of Materials/SBOM (https://github.com/$ORG_NAME/$REPO_NAME/network/dependencies)</td>
-      <td>augur, uswds</td>
-    </tr>
-        <tr>
       <td>subsetInHealthcare</td>
       <td>required</td>
       <td><img src="../assets/cms-logo.jpg" alt="CMS Logo"></td>
