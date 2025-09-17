@@ -5,14 +5,20 @@ The CMS Open Source Program Office developed various tools that can automate det
 > **Learn more about our SHARE IT Act tools**: https://dsacms.github.io/share-it-act-lp/
 
 **Procedures for Project Teams**:
+
 [Creating a code.json file in your repository](#creating-a-codejson-file-in-your-repository)
 - [code.json generator form site](#using-form-site)
 - [automated-codejson-generator GitHub Action](#using-automated-codejson-generator)
 - [repo-scaffolder](#using-repo-scaffolder)
 
-***Procedures for Agencies**:
+**Procedures for Agencies**:
+
 [Generate an agency-index.json file for submission](#generate-an-agency-indexjson-file-for-agencies)
 - [codejson-index-generator](#using-codejson-index-generator)
+
+[Tools created by other teams and agencies](#tools-created-by-other-teams-and-agencies)
+- [CMS CMCS](#cms-cmcs-codejson-aggregator)
+- [CDC](#cdc-share-it-act-repository-scanner-tool)
 
 
 ## Creating a code.json file in your repository
@@ -21,7 +27,6 @@ The CMS Open Source Program Office developed various tools that can automate det
 *This method works best for all repositories on all platforms.*
 
 Users can fill out a web form that creates a code.json file to be uploaded to a project's source code repository: https://dsacms.github.io/codejson-generator.
-
 
 
 ### Using automated-codejson-generator
@@ -143,3 +148,18 @@ python main.py --agency AGENCY_NAME --orgs "org1,org2" --output code.json --vers
 ```bash
 python3 main.py --agency CMS --orgs "DSACMS,CMSgov,CMS-Enterprise" --output code.json --version 1.0.0
 ```
+
+## Tools created by other teams and agencies
+
+Below are tools other teams and agencies developed to create a consolidated software inventory for the SHARE IT Act. They include methods to retrieve necessary metadata from private and internal repositories.
+
+### CMS CMCS code.json aggregator
+
+mac-fc-aggregate-codejson aggregates code.json files from all private and internal repositories in a GitHub organization.
+https://github.com/Enterprise-CMCS/mac-fc-aggregate-code-json
+
+## CDC SHARE IT Act Repository Scanner Tool
+
+The CDC SHARE IT Act Repository Scanner Tool gathers and consolidates repository metadata from various code environments by generating code.json files in all repositories, having project teams review and correct information for accuracy, then creating an index file containing all aggregated code.json metadata.
+- https://github.com/CDCgov/ShareIT-Act
+- https://github.com/OCIO-ricky/ShareITAct_RepoScanning
