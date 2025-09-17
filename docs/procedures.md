@@ -15,7 +15,7 @@ The CMS Open Source Program Office developed various tools that can automate det
 - [codejson-index-generator](#using-codejson-index-generator)
 [Tools created by other teams and agencies](#tools-created-by-other-teams-and-agencies)
 - [CMS CMCS](#cms-cmcs-codejson-aggregator)
-- [CDC](#cdc-share-it-act-repository)
+- [CDC](#cdc-share-it-act-repository-scanner-tool)
 
 
 ## Creating a code.json file in your repository
@@ -155,7 +155,8 @@ Below are tools other teams and agencies developed to create a consolidated soft
 mac-fc-aggregate-codejson aggregates code.json files from all private and internal repositories in a GitHub organization
 https://github.com/Enterprise-CMCS/mac-fc-aggregate-code-json
 
-## CDC SHARE IT Act Repository
+## CDC SHARE IT Act Repository Scanner Tool
 
 The CDC SHARE IT Act Repository gathers and consolidates repository metadata from various code environments by generating code.json files in all repositories, having project teams review and correct information for accuracy, then creating an index file containing all aggregated code.json metadata.
 https://github.com/CDCgov/ShareIT-Act
+https://github.com/OCIO-ricky/ShareITAct_RepoScanning
