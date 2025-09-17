@@ -1,12 +1,12 @@
 {
   "name": "gov-codejson",
-  "description": "CMS code.json: An agency-wide metadata standard for software projects",
+  "description": "code.json: An agency-wide metadata standard for software projects",
   "longDescription": "This repository contains documentation on code.json, a metadata standard used to collect information on the agency's software projects in compliance with M-16-21 and the SHARE IT Act.",
   "status": "Production",
   "permissions": {
     "license": [
       {
-        "name": "CC0 1.0 Universal",
+        "name": "CC0 1.0",
         "URL": "https://github.com/DSACMS/gov-codejson/blob/main/LICENSE"
       }
     ],
@@ -15,13 +15,16 @@
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/gov-codejson",
-  "projectURL": "",
   "repositoryHost": "github.com/DSACMS",
-  "repositoryVisibility": "",
+  "repositoryVisibility": "public",
+  "homepageURL": "",
+  "downloadURL": "",
+  "disclaimerURL": "",
+  "disclaimerText": "",
   "vcs": "git",
   "laborHours": 3845,
   "reuseFrequency": {
-    "forks": 0,
+    "forks": 2,
     "clones": 0
   },
   "platforms": [
@@ -32,9 +35,10 @@
     "help-desk"
   ],
   "softwareType": "standalone/web",
-  "languages": [],
-  "maintenance": "internal",
-  "contractNumber": "",
+  "languages": ["Markdown"],
+  "maintenance": "community",
+  "contractNumber": [],
+  "SBOM": "https://github.com/DSACMS/gov-codejson/network/dependencies",
   "date": {
     "created": "2025-02-04T21:59:53Z",
     "lastModified": "2025-06-05T18:05:11Z",
@@ -52,17 +56,15 @@
     "email": "opensource@cms.hhs.gov",
     "name": "CMS Open Source Team"
   },
-  "feedbackMechanisms": [
-    "https://github.com/DSACMS/gov-codejson/issues"
-  ],
+  "feedbackMechanism": "https://github.com/DSACMS/gov-codejson/issues",
+  "AIUseCaseID": "0",
   "localisation": false,
   "repositoryType": "standards",
   "userInput": false,
   "fismaLevel": "Low",
   "group": "CMS/OA/DSAC",
-  "projects": [],
+  "projects": ["SHARE IT Act"],
   "systems": [],
-  "upstream": "",
   "subsetInHealthcare": [
     "Operational"
   ],
