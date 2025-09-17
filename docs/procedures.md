@@ -5,12 +5,14 @@ The CMS Open Source Program Office developed various tools that can automate det
 > **Learn more about our SHARE IT Act tools**: https://dsacms.github.io/share-it-act-lp/
 
 **Procedures for Project Teams**:
+
 [Creating a code.json file in your repository](#creating-a-codejson-file-in-your-repository)
 - [code.json generator form site](#using-form-site)
 - [automated-codejson-generator GitHub Action](#using-automated-codejson-generator)
 - [repo-scaffolder](#using-repo-scaffolder)
 
-***Procedures for Agencies**:
+**Procedures for Agencies**:
+
 [Generate an agency-index.json file for submission](#generate-an-agency-indexjson-file-for-agencies)
 - [codejson-index-generator](#using-codejson-index-generator)
 
