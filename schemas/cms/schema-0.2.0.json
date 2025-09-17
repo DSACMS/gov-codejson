@@ -1,6 +1,7 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "title": "CMS Code.json Metadata",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://dsacms.github.io/code-json-schema.json",
+    "title": "CMS code.json metadata",
     "description": "A metadata standard for software repositories of CMS",
     "type": "object",
     "properties": {
@@ -70,23 +71,33 @@
                         "required": [
                             "name",
                             "URL"
-                        ]
+                        ],
+                        "additionalProperties": false
                     }
                 },
                 "usageType": {
-                    "type": "string",
-                    "description": "A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByLaw: The sharing of the source code is restricted by law or regulation, including—but not limited to—patent or intellectual property law, the Export Asset Regulations, the International Traffic in Arms Regulation, and the Federal laws and regulations governing classified information; (4) exemptByNationalSecurity: The sharing of the source code would create an identifiable risk to the detriment of national security, confidentiality of Government information, or individual privacy; (5) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel, (6) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations; (7) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code; (8) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)",
-                    "enum": [
-                        "openSource",
-                        "governmentWideReuse",
-                        "exemptByLaw",
-                        "exemptByNationalSecurity",
-                        "exemptByAgencySystem",
-                        "exemptByAgencyMission",
-                        "exemptByCIO",
-                        "exemptByPolicyDate"
-                    ],
-                    "additionalProperties": false
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "openSource",
+                            "governmentWideReuse",
+                            "exemptByNationalSecurity",
+                            "exemptByNationalIntelligence",
+                            "exemptByFOIA",
+                            "exemptByEAR",
+                            "exemptByITAR",
+                            "exemptByTSA",
+                            "exemptByClassifiedInformation",
+                            "exemptByPrivacyRisk",
+                            "exemptByIPRestriction",
+                            "exemptByAgencySystem",
+                            "exemptByAgencyMission",
+                            "exemptByCIO",
+                            "exemptByPolicyDate"
+                        ]
+                    },
+                    "description": "A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByNationalSecurity: The source code is primarily for use in national security system as defined in section 11103 of title 40, USC; (4) exemptByNationalIntelligence: The source code is developed by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947; (5) exemptByFOIA: The source code is exempt under the Freedom of Information Act; (6) exemptByEAR: The source code is exempt under the Export Administration Regulations; (7) exemptByITAR: The source code is exempt under the the International Traffic in Arms Regulations; (8) exemptByTSA: The source code is exempt under the regulations of the Transportation Security Administration relating to the protection of Sensitive Security Information; (9) exemptByClassifiedInformation: The source code is exempt under the Federal laws and regulations governing the sharing of classified information not covered by exemptByNationalSecurity, exemptByNationalIntelligence, exemptbyFOIA, exemptByEAR, exemptByITAR, and exemptByTSA; (10) exemptByPrivacyRisk: The sharing or public accessibility of the source code would create an identifiable risk to the privacy of an individual; (11) exemptByIPRestriction: The sharing of the source code is limited by patent or intellectual property restrictions; (12) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency's systems or personnel; (13) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations;  (14) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code;  (15) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)"
                 },
                 "exemptionText": {
                     "type": [
@@ -104,7 +115,7 @@
         },
         "organization": {
             "type": "string",
-            "description": "Organization responsible for the project",
+            "description": "The organization or component within the agency to which the releases listed belong.",
             "enum": [
                 "Centers for Medicare & Medicaid Services"
             ]
@@ -147,11 +158,13 @@
                 "hg",
                 "svn",
                 "rcs",
-                "bzr"
+                "bzr",
+                "none"
             ]
         },
         "laborHours": {
             "type": "number",
+            "minimum": 0,
             "description": "Labor hours invested in the project. Calculated using COCOMO measured by the SCC tool: https://github.com/boyter/scc?tab=readme-ov-file#cocomo"
         },
         "reuseFrequency": {
@@ -159,10 +172,12 @@
             "description": "Measures frequency of code reuse in various forms. (e.g. forks, downloads, clones)",
             "properties": {
                 "forks": {
-                    "type": "integer"
+                    "type": "integer",
+                    "minimum": 0
                 },
                 "clones": {
-                    "type": "integer"
+                    "type": "integer",
+                    "minimum": 0
                 }
             },
             "additionalProperties": true
@@ -181,14 +196,16 @@
                     "android",
                     "other"
                 ]
-            }
+            },
+            "uniqueItems": true
         },
         "categories": {
             "type": "array",
             "description": "Categories the project belongs to. Select from: https://yml.publiccode.tools/categories-list.html",
             "items": {
                 "type": "string"
-            }
+            },
+            "uniqueItems": true
         },
         "softwareType": {
             "type": "string",
@@ -210,7 +227,8 @@
             "description": "Programming languages that make up the codebase",
             "items": {
                 "type": "string"
-            }
+            },
+            "uniqueItems": true
         },
         "maintenance": {
             "type": "string",
@@ -227,7 +245,12 @@
             "description": "Contract number(s) under which the project was developed",
             "items": {
                 "type": "string"
-            }
+            },
+            "uniqueItems": true
+        },
+        "SBOM": {
+            "type": "string",
+            "description": "Link of the upstream repositories and dependencies used, in the form of a Software Bill of Materials/SBOM. If the software does not have a SBOM, enter 'None'. (i.e. Github provides an SBOM: https://github.com/$ORG_NAME/$REPO_NAME/network/dependencies)"
         },
         "date": {
             "type": "object",
@@ -248,14 +271,16 @@
                     "format": "date-time",
                     "description": "Date when metadata was last updated"
                 }
-            }
+            },
+            "additionalProperties": false
         },
         "tags": {
             "type": "array",
             "description": "Topics and keywords associated with the project to improve search and discoverability",
             "items": {
                 "type": "string"
-            }
+            },
+            "uniqueItems": true
         },
         "contact": {
             "type": "object",
@@ -270,12 +295,17 @@
                     "type": "string",
                     "description": "Name of the point of contact"
                 }
-            }
+            },
+            "additionalProperties": false
         },
-        "feedbackMechanisms": {
+        "feedbackMechanism": {
             "type": "string",
             "format": "uri",
             "description": "Method a repository receives feedback from the community (i.e. URL to GitHub repository issues page)"
+        },
+        "AIUseCaseID": {
+            "type": "string",
+            "description": "The software's ID in the AI Use Case Inventory. If the software is not currently listed in the inventory, enter '0'."
         },
         "localisation": {
             "type": "boolean",
@@ -303,9 +333,9 @@
             "type": "string",
             "description": "Level of security categorization assigned to an information system under the Federal Information Security Modernization Act (FISMA): https://security.cms.gov/learn/federal-information-security-modernization-act-fisma",
             "enum": [
-                "Low",
-                "Moderate",
-                "High"
+                "low",
+                "moderate",
+                "high"
             ]
         },
         "group": {
@@ -317,43 +347,43 @@
             "description": "Project(s) that is associated or related to the repository, if any (e.g. Bluebutton, MPSM)",
             "items": {
                 "type": "string"
-            }
+            },
+            "uniqueItems": true
         },
         "systems": {
             "type": "array",
             "description": "CMS systems that the repository interfaces with or depends on, if any (e.g. IDR, PECOS)",
             "items": {
                 "type": "string"
-            }
-        },
-        "upstream": {
-            "type": "string",
-            "description": "Link of the upstream repositories and dependencies used, in the form of a Software Bill of Materials/SBOM (https://github.com/$ORG_NAME/$REPO_NAME/network/dependencies)"
+            },
+            "uniqueItems": true
         },
         "subsetInHealthcare": {
             "type": "array",
             "items": {
                 "type": "string",
                 "enum": [
-                    "Policy",
-                    "Operational",
-                    "Medicare",
-                    "Medicaid"
+                    "policy",
+                    "operational",
+                    "medicare",
+                    "medicaid"
                 ]
             },
-            "description": "Healthcare-related subset"
+            "description": "Healthcare-related subset",
+            "uniqueItems": true
         },
         "userType": {
             "type": "array",
             "items": {
                 "type": "string",
                 "enum": [
-                    "Providers",
-                    "Patients",
-                    "Government"
+                    "providers",
+                    "patients",
+                    "government"
                 ]
             },
-            "description": "Types of users who interact with the software"
+            "description": "Types of users who interact with the software",
+            "uniqueItems": true
         },
         "maturityModelTier": {
             "type": "integer",
@@ -386,10 +416,12 @@
         "languages",
         "maintenance",
         "contractNumber",
+        "SBOM",
         "date",
         "tags",
         "contact",
-        "feedbackMechanisms",
+        "feedbackMechanism",
+        "AIUseCaseID",
         "localisation",
         "repositoryType",
         "userInput",

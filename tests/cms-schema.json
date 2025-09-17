@@ -1,0 +1,21 @@
+{
+    "target": "../schemas/cms/schema-2.0.0.json",
+    "$comment": "This test suite validates code.json files for compliance with the CMS schema requirements.",
+    "tests": [
+        {
+            "description": "Example 1: DedupliFHIR",
+            "valid": true,
+            "dataPath": "./examples/codejson-example-dedupliFHIR.json"
+        },
+        {
+            "description": "Example 2: metrics",
+            "valid": true,
+            "dataPath": "./examples/codejson-example-metrics.json"
+        },
+        {
+            "description": "Example 3: gov-codejson",
+            "valid": true,
+            "dataPath": "../code.json"
+        }
+    ]
+}

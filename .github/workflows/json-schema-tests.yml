@@ -1,0 +1,38 @@
+name: json-schema-tests
+on:
+    pull_request:
+        types: [opened, synchronize]
+    # Paths can be used to only trigger actions when you have edited checklist files
+        branches:
+        - 'main'
+
+permissions:
+  contents: read
+  pull-requests: write # enable write permissions for pull request comments
+
+jobs:
+  json-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: json-yaml-validate
+        id: json-yaml-validate
+        uses: GrantBirki/json-yaml-validate@v3.3.2 # replace with the latest version
+        with:
+          comment: "true"
+          json_schema_version: "draft-2020-12"
+          
+  schema-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install the JSON Schema CLI
+        uses: sourcemeta/jsonschema@v11.1.1
+
+      - name: Run generic schema unit tests
+        run: jsonschema test tests/gov-schema.json --resolve schemas/schema-2.0.0.json
+      
+      - name: Run CMS schema unit tests
+        run: jsonschema test tests/cms-schema.json --resolve schemas/cms/schema-2.0.0.json
