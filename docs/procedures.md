@@ -13,6 +13,7 @@ The CMS Open Source Program Office developed various tools that can automate det
 ***Procedures for Agencies**:
 [Generate an agency-index.json file for submission](#generate-an-agency-indexjson-file-for-agencies)
 - [codejson-index-generator](#using-codejson-index-generator)
+
 [Tools created by other teams and agencies](#tools-created-by-other-teams-and-agencies)
 - [CMS CMCS](#cms-cmcs-codejson-aggregator)
 - [CDC](#cdc-share-it-act-repository-scanner-tool)
