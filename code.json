@@ -1,5 +1,6 @@
 {
   "name": "gov-codejson",
+  "version": "2.0.0",
   "description": "code.json: An agency-wide metadata standard for software projects",
   "longDescription": "This repository contains documentation on code.json, a metadata standard used to collect information on agency software projects in compliance with M-16-21 and the SHARE IT Act.",
   "status": "Production",
@@ -19,10 +20,15 @@
   "repositoryURL": "https://github.com/DSACMS/gov-codejson",
   "repositoryHost": "github.com/DSACMS",
   "repositoryVisibility": "public",
-  "vcs": "git",
+  "homepageURL": "",
+  "downloadURL": "",
+  "disclaimerURL": "",
+  "disclaimerText": "",
+   "vcs": "git",
   "laborHours": 3479,
   "reuseFrequency": {
-    "forks": 2
+    "forks": 2,
+    "clones": 0
   },
   "platforms": [
     "web"
@@ -33,7 +39,8 @@
   ],
   "softwareType": "standalone/web",
   "languages": [
-    "javascript"
+    "Javascript",
+    "Markdown"
   ],
   "maintenance": "community",
   "contractNumber": [],
