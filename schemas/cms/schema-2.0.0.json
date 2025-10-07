@@ -344,7 +344,7 @@
                     "format": "date-time",
                     "description": "Date when the project was last modified"
                 },
-                "metaDataLastUpdated": {
+                "metadataLastUpdated": {
                     "type": "string",
                     "format": "date-time",
                     "description": "Date when metadata was last updated"
