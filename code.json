@@ -54,7 +54,9 @@
     "dsacms-tier3",
     "government",
     "json",
-    "metadata-standard"
+    "metadata-standard",
+    "codejson",
+    "featured"
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
@@ -68,7 +70,7 @@
   "fismaLevel": "low",
   "group": "CMS/OA/DSAC",
   "projects": [
-    "SHARE IT Act"
+    "share-it-act"
   ],
   "systems": [],
   "subsetInHealthcare": [
