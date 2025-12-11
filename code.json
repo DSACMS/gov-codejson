@@ -38,7 +38,7 @@
     "help-desk"
   ],
   "softwareType": "standalone/web",
-  "languages": [],
+  "languages": ["Markdown"],
   "maintenance": "community",
   "contractNumber": [],
   "SBOM": "https://github.com/DSACMS/gov-codejson/network/dependencies",
