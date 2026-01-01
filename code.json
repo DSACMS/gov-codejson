@@ -25,7 +25,7 @@
   "disclaimerURL": "",
   "disclaimerText": "",
   "vcs": "git",
-  "laborHours": 4785,
+  "laborHours": 4784,
   "reuseFrequency": {
     "forks": 2,
     "clones": 0
@@ -38,7 +38,7 @@
     "help-desk"
   ],
   "softwareType": "standalone/web",
-  "languages": ["Markdown"],
+  "languages": [],
   "maintenance": "community",
   "contractNumber": [],
   "SBOM": "https://github.com/DSACMS/gov-codejson/network/dependencies",
@@ -47,16 +47,15 @@
   "partners": [],
   "date": {
     "created": "2025-02-04T21:59:53Z",
-    "lastModified": "2025-11-07T19:11:42Z",
-    "metadataLastUpdated": "2025-12-01T01:41:07.791Z"
+    "lastModified": "2025-12-12T19:26:21Z",
+    "metadataLastUpdated": "2026-01-01T01:40:55.665Z"
   },
   "tags": [
     "dsacms-tier3",
+    "featured",
     "government",
     "json",
-    "metadata-standard",
-    "codejson",
-    "featured"
+    "metadata-standard"
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
