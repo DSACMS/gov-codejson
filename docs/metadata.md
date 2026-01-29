@@ -520,6 +520,7 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
         - github.com/CMS-Enterprise<br>
         - github.com/Enterprise-CMCS<br>
         - github.com/DSACMS<br>
+        - github.com/MeasureAuthoringTool<br>
         - github.cms.gov<br>
         - CCSQ GitHub
       </td>
