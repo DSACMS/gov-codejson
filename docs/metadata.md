@@ -835,7 +835,10 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
         - policy<br>
         - operational<br>
         - medicare<br>
-        - medicaid
+        - medicaid<br>
+        - SNAP<br>
+        - TANF<br>
+        - human-benefit-services
       </td>
     </tr>
     <tr>
@@ -847,7 +850,10 @@ Full schema can be found in [schema-2.0.0.json](../schemas/schema-2.0.0.json).
       <td>
         - providers<br>
         - patients<br>
-        - government
+        - government<br>
+        - applicants<br>
+        - beneficiaries<br>
+        - enrollees
       </td>
     </tr>
     <tr>
