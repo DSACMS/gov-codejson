@@ -31,8 +31,8 @@ There are [4 exemptions](https://www.congress.gov/bill/118th-congress/house-bill
 
 1. Source code developed primarily for use in a national security system
 2. Source code developed by an agency, or part of an agency, that is an element of the intelligence community
-3. Source code that falls under the Freedom of Information Act
-4. Source code identified by the agency’s CIO
+3. Source code that is exempted from the Freedom of Information Act
+4. Source code exempted by the agency’s CIO
 
 ### Does SHARE IT Act apply to data analysis code?
 
