@@ -26,28 +26,33 @@ We encourage agencies to contribute by [submitting an agency schema addition iss
   <thead>
     <tr>
       <th>Source Policy</th>
+      <th>Metadata</th>
       <th>Origin</th>
       <th>Icon</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://github.com/GSA/code-gov-data/blob/master/schemas/schema-2.0.0.json">code.json</a></td>
+      <td><a href="https://github.com/GSA/code-gov-data/blob/master/schemas/schema-2.0.0.json">M-16-21</a></td>
+      <td>code.json</td>
       <td>Federal</td>
       <td>🇺🇸</td>
     </tr>
     <tr>
       <td><a href="https://yml.publiccode.tools/">publiccode.yml</a></td>
+      <td>publiccode.yml</td>
       <td>International</td>
       <td>🌎</td>
     </tr>
     <tr>
     <td><a href="https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih">SHARE IT Act</a></td>
+      <td>code.json</td>
       <td>Federal</td>
       <td>📜</td>
     </tr>
     <tr>
       <td><a href="https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-21-Accelerating-Federal-Use-of-AI-through-Innovation-Governance-and-Public-Trust.pdf">M-25-21</a></td>
+      <td>code.json</td>
       <td>Federal</td>
       <td>🌐</td>
     </tr>
