@@ -32,28 +32,28 @@ TODO: Good to include since this is an agency-led project -->
 
 ## Core Team
 
-An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAINERS.md). At this time, the project is still building the core team and defining roles and responsibilities. We are eagerly seeking individuals who would like to join the community and help us define and fill these roles.
-
-## Documentation Index
-
-- [docs](./docs)
+An up-to-date list of core team members can be found in [COMMUNITY.md](COMMUNITY.md).
 
 ## Repository Structure
 
-##### Documentation
+```
+.
+├── assets            # Assets for docs
+├── docs              # Directory containing information on code.json metadata standard
+├── schemas           # Schemas for software inventory metadata: code.json, agency extended code.json schemas, and agency-index.json
+│   ├── agency-index  # Schema for agency index
+│   └── cms           # CMS code.json extended agency schema
+└── tests             # JSON schema validation tests
+    └── examples      # Examples of completed code.jsons
+```
 
-- [schemas](./schemas)
-- [docs](./docs)
+### Documentation Index
 
-##### Files
-
-- [CONTRIBUTING.md](./CONTRIBUTING.md)
-- [MAINTAINERS.md](./MAINTAINERS.md)
-- [CODEOWNERS.md](./CODEOWNERS.md)
-- [COMMUNITY_GUIDELINES.md](./COMMUNITY_GUIDELINES.md)
-- [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)
-- [SECURITY.md](./SECURITY.md)
-- [LICENSE](./LICENSE)
+- [CONTRIBUTING.md](./CONTRIBUTING.md): Guidelines for contributing to the project
+- [COMMUNITY.md](./COMMUNITY.md) & [CODEOWNERS.md](./.github/CODEOWNERS.md): Core team information and guidelines for community participation
+- [GOVERNANCE.md](./GOVERNANCE.md) - Project governance information
+- [SECURITY.md](./SECURITY.md) - Security and vulnerability disclosure policies
+- [LICENSE](./LICENSE) - CC0 1.0 Universal public domain dedication
 
 # Development and Software Delivery Lifecycle
 
@@ -91,7 +91,7 @@ Thank you for considering contributing to an Open Source project of the US Gover
 
 ## Codeowners
 
-The contents of this repository are managed by the CMS Open Source Program Office. Those responsible for the code and documentation in this repository can be found in [CODEOWNERS.md](CODEOWNERS.md).
+The contents of this repository are managed by the CMS Open Source Program Office. Those responsible for the code and documentation in this repository can be found in [CODEOWNERS.md](./github/CODEOWNERS.md).
 
 ## Community
 
@@ -103,7 +103,7 @@ We also recognize capacity building as a key part of involving a diverse open so
 
 ### Community Guidelines
 
-Principles and guidelines for participating in our open source community are can be found in [COMMUNITY_GUIDELINES.md](COMMUNITY_GUIDELINES.md). Please read them before joining or starting a conversation in this repo or one of the channels listed below. All community members and participants are expected to adhere to the community guidelines and code of conduct when participating in community spaces including: code repositories, communication channels and venues, and events.
+Principles and guidelines for participating in our open source community are can be found in [COMMUNITY.md](COMMUNITY.md). Please read them before joining or starting a conversation in this repo or one of the channels listed below. All community members and participants are expected to adhere to the community guidelines and code of conduct when participating in community spaces including: code repositories, communication channels and venues, and events.
 
 <!--
 ## Governance
