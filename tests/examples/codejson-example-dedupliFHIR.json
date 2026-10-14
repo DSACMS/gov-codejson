@@ -1,5 +1,6 @@
 {
     "name": "dedupliFHIR",
+    "identifier": "dedupliFHIR",
     "description": "Prototype for basic deduplication and aggregation of eCQM data",
     "longDescription": "A CLI bundled with an Electron.js front-end that provides data-linkage and AI deduplication for reported Accountable Care Organization (ACO) data at scale.",
     "status": "Production",

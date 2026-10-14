@@ -1,5 +1,5 @@
 {
-    "target": "../schemas/schema-2.0.0.json",
+    "target": "../schemas/schema-0.1.0.json",
     "$comment": "This test suite validates CMS code.json files for compliance with the generic schema, ensuring alignment with federal government metadata standards.",
     "tests": [
         {
