@@ -7,19 +7,21 @@ you'll be politely asked to change something. We appreciate all friendly
 contributions.
 
 We encourage you to read this project's CONTRIBUTING policy (you are here), its
-[LICENSE](LICENSE.md), and its [README](README.md).
+[LICENSE](LICENSE), and its [README](README.md).
 
 ## Getting Started
 
-If you would like to comment and provide feedback on the metadata standard, please let us know by filing an **issue on our GitHub repository.**
+If you would like to comment and provide feedback on the metadata standard, please let us know by filing an **issue on our GitHub repository**.
+
+### For agencies
 
 We encourage agencies to contribute by [submitting an agency schema addition issue](https://github.com/DSACMS/gov-codejson/issues) to [include their extended schema in the repository](../schemas). This helps foster collaboration and ensures shared improvements benefit the wider community.
 
-For CMS, we are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
+We are open to adding more fields to maximal schema of government-wide code.json standard for any metadata the government sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
 
 ### Team Specific Guidelines
 
-The project is led by the CMS Open Source Program Office team as detailed in [MAINTAINERS.md](/MAINTAINERS.md)
+The project is led by the CMS Open Source Program Office team as detailed in [COMMUNITY.md](/COMMUNITY.md).
 
 ### Building dependencies
 
@@ -54,7 +56,9 @@ N/A
 
 If you would like to comment on the metadata standard, please let us know by filing an **issue on our GitHub repository.**
 
-For CMS, we are open to adding more fields to CMS code.json for any metadata the agency sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
+#### For agencies
+
+We are open to adding more fields to maximal schema of government-wide code.json standard for any metadata the government sees value in collecting. Request new metadata fields by filing a metadata field addition issue [here](https://github.com/DSACMS/gov-codejson/issues/new?template=metadata-field-addition.md).
 
 ### Writing Pull Requests
 
@@ -94,7 +98,7 @@ Some important notes regarding the summary line:
 
 ## Reviewing Pull Requests
 
-Pull requests will be reviewed by the CMS Open Source Program Office team as detailed in [MAINTAINERS.md](/MAINTAINERS.md)
+Pull requests will be reviewed by the CMS Open Source Program Office team as detailed in [COMMUNITY.md](/COMMUNITY.md)
 
 <!--
 ## Shipping Releases

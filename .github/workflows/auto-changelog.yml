@@ -3,6 +3,8 @@ on:
   release:
     types:
       - created
+permissions:
+  contents: write
 jobs:
   changelog:
     runs-on: ubuntu-latest
@@ -10,6 +12,4 @@ jobs:
       - name: "Auto Generate changelog"
         uses: heinrichreimer/action-github-changelog-generator@v2.3
         with:
-          
           token: ${{ secrets.GITHUB_TOKEN }}
-          
