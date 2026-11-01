@@ -25,9 +25,9 @@
   "disclaimerURL": "",
   "disclaimerText": "",
   "vcs": "git",
-  "laborHours": 4998,
+  "laborHours": 4891,
   "reuseFrequency": {
-    "forks": 2,
+    "forks": 3,
     "clones": 0
   },
   "platforms": [
@@ -47,8 +47,8 @@
   "partners": [],
   "date": {
     "created": "2025-02-04T21:59:53Z",
-    "lastModified": "2026-05-19T17:09:53Z",
-    "metadataLastUpdated": "2026-10-01T03:54:33.657Z"
+    "lastModified": "2026-10-14T16:12:47Z",
+    "metadataLastUpdated": "2026-11-01T04:05:10.351Z"
   },
   "tags": [
     "codejson",
