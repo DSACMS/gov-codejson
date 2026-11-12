@@ -1,3 +1,6 @@
+> [!IMPORTANT]  
+> This repository is no longer actively maintained and has been migrated to the [GSA-SHARE-IT organization](https://github.com/GSA-SHARE-IT/codejson-schemas). Going forward, visit the [codejson-schemas repository](https://github.com/GSA-SHARE-IT/codejson-schemas) for latest updates on the code.json metadata standard along with the latest schema releases.
+
 # gov-codejson
 
 code.json: An agency-wide metadata standard for software projects
